@@ -1,8 +1,8 @@
-import Layout from '../components/layout'
+import Layout from "../components/layout";
 
-export default function Index() {  
+export default function IndexPage() {  
   return (
-    <Layout>
+    <Layout title="Home">
       <h1>Olá</h1>    
     </Layout>
   )
