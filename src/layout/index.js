@@ -1,7 +1,10 @@
 import Link from "next/link";
 import Head from "next/head";
 
-export default function Layout({ children, title = null }) {
+function Layout({
+  children,
+  title = null
+}) {
   return (
     <div>
       <Head>
@@ -18,3 +21,5 @@ export default function Layout({ children, title = null }) {
     </div>
   )
 }
+
+export default Layout;
