@@ -2,9 +2,9 @@ import Head from "next/head";
 
 import Navbar from "../components/Navbar";
 
-function Layout({
+export default function Layout({
   children,
-  title = null
+  title = "own | zevdvlpr"
 }) {
   return (
     <>
@@ -18,5 +18,3 @@ function Layout({
     </>
   )
 }
-
-export default Layout;

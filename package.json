@@ -2,9 +2,12 @@
   "name": "my-portfolio",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "dev": "run-s clean run",
+    "build": "run-s clean compile",
+    "start": "next start",
+    "clean": "rimraf __next",
+    "compile": "next build",
+    "run": "next"
   },
   "dependencies": {
     "next": "latest",
@@ -12,5 +15,13 @@
     "react-dom": "^16.13.0",
     "styled-components": "^5.1.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@next/bundle-analyzer": "^9.4.2",
+    "@zeit/next-source-maps": "^0.0.3",
+    "babel-plugin-styled-components": "^1.10.7",
+    "next-compose-plugins": "^2.2.0",
+    "next-optimized-images": "^2.6.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2"
+  }
 }

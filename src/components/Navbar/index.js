@@ -11,7 +11,7 @@ const NavbarComponent = () => {
   return (
     <Header>
       <Navigation>
-        <Link href="/">Home</Link>        
+        <Link href="/"><a>Home</a></Link>        
       </Navigation>
     </Header>
   )

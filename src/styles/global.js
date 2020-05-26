@@ -1,9 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
-import Constants from "../util/Constants";
-
 export default createGlobalStyle`
-  @import url(${Constants.fonts.MONTSERRAT});
+  @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,900,900i");
   
   * {
     padding: 0;
@@ -13,8 +11,13 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   
+  :root {
+    --color-full-white: #FFFFFF;
+    --color-smoke: #F5F6F3;
+  }
+  
   body {    
     font: 400 16px Montserrat, sans-serif;
-    background: ${Constants.colors.FULL_WHITE};  
+    background: var(--color-full-white);  
   }
 `;
