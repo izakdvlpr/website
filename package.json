@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "run-s clean run",
-    "build": "run-s clean compile",
+    "build": "next build",
     "start": "next start",
     "clean": "rimraf __next",
-    "compile": "next build",
     "run": "next"
   },
   "dependencies": {

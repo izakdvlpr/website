@@ -8,16 +8,11 @@ export default createGlobalStyle`
     margin: 0; 
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box;
-  }
-  
-  :root {
-    --color-full-white: #FFFFFF;
-    --color-smoke: #F5F6F3;
-  }
+    box-sizing: border-box;    
+  } 
   
   body {    
     font: 400 16px Montserrat, sans-serif;
-    background: var(--color-full-white);  
+    background: #FFFFFF;      
   }
 `;
