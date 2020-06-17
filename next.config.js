@@ -12,5 +12,5 @@ module.exports = composePlugins(
   {
     distDir: '__next',
     devIndicators: { autoPrerender: false },
-  }
+  },
 );
