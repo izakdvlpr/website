@@ -1,12 +1,12 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Container = styled.nav` 
-  padding: 15px;    
-  width: 100%;    
+export const Container = styled.nav`
+  padding: 15px;
+  width: 100%;
   background: var(--js-primary);
 `;
 
-export const Logo = styled.label`  
+export const Logo = styled.label`
   font-size: 55px;
   line-height: 80px;
   padding: 0 40px 0 100px;
@@ -14,22 +14,22 @@ export const Logo = styled.label`
 `;
 
 export const Nav = styled.ul`
-  float: right;  
+  float: right;
   margin-right: 50px;
-  
-  a {  
-    padding: 10px; 
-    margin: 0px 10px 0px 10px;        
+
+  a {
+    padding: 10px;
+    margin: 0px 10px 0px 10px;
     font-size: 17px;
     text-transform: uppercase;
-    border-radius: 3px;    
+    border-radius: 3px;
     color: #000000;
-    background: var(--js-secondary);   
-  }    
-  
+    background: var(--js-secondary);
+  }
+
   a:hover {
     background: #000000;
-    color: #FFFFFF;
+    color: #ffffff;
     transition: 0.5s;
   }
 `;

@@ -7,17 +7,10 @@ module.exports = composePlugins(
   [
     [optimizedImages],
     [sourceMaps],
-    [
-      bundleAnalyzer,
-      {
-        enabled: !!process.env.ANALYZE,
-      },
-    ],
+    [bundleAnalyzer, { enabled: !!process.env.ANALYZE }],
   ],
   {
     distDir: '__next',
-    devIndicators: {
-      autoPrerender: false,
-    },
-  },
+    devIndicators: { autoPrerender: false },
+  }
 );
