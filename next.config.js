@@ -13,7 +13,7 @@ module.exports = composePlugins(
     ],
   ],
   {
-    distDir: "__next",
+    distDir: "dist",
     devIndicators: {
       autoPrerender: false,
     },
