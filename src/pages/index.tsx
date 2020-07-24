@@ -1,16 +1,25 @@
 import React from "react";
 import Layout from "@layout";
+import Link from "next/link";
 
-import { Container, Logo, Title, About, Divisor } from "@styles/index";
+import {
+  Container,
+  Logo,
+  Title,
+  About,
+  Divisor,
+  Icons,
+  GithubIcon,
+  LinkedinIcon,
+  TwitterIcon,
+  EmailIcon,
+} from "@styles/index";
 
 const IndexPage = () => {
   return (
     <Layout title="Meu portifolio :)">
       <Container>
-        <Logo
-          src="https://avatars2.githubusercontent.com/u/44278486?v=4"
-          alt="zevdvlpr"
-        />
+        <Logo src="/logo.gif" alt="zevdvlpr" />
         <Title>
           zev<span>dvlpr</span>
         </Title>
@@ -19,6 +28,20 @@ const IndexPage = () => {
           e Pizza
         </About>
         <Divisor />
+        <Icons>
+          <a href="https://github.com/zevdvlpr">
+            <GithubIcon />
+          </a>
+          <a href="https://www.linkedin.com/in/zevdvlpr/">
+            <LinkedinIcon />
+          </a>
+          <a href="https://twitter.com/zevdvlpr">
+            <TwitterIcon />
+          </a>
+          <a href="mailto:diego.schell.f@gmail.com">
+            <EmailIcon />
+          </a>
+        </Icons>
       </Container>
     </Layout>
   );

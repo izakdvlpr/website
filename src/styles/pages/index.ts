@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
-import { lighten } from "polished";
+import { lighten, shade } from "polished";
 
-import {  } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 import colors from "../colors";
 
@@ -31,15 +32,21 @@ export const Title = styled.h1`
   margin: 1rem 0;
 
   > span {
-    color: ${lighten(0.15, colors.primary)};
+    color: ${colors.primary};
   }
 `;
 
 export const About = styled.p`
+  padding: 0 20px;
+
   font-size: 20px;
 
   > b {
-    color: ${lighten(0.15, colors.primary)};
+    color: ${colors.primary};
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 15px;
   }
 `;
 
@@ -49,4 +56,54 @@ export const Divisor = styled.hr`
   margin: 1.5rem;
      
   border: 1px solid ${lighten(0.50, colors.black)};
+  
+  @media (max-width: 768px) {
+    width: 20em;
+  }
+  
+  @media (max-width: 320px) {
+    width: 17em;
+  }
+`;
+
+export const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const GithubIcon = styled(FaGithub)`
+  height: 40px;
+  width: 40px;
+  
+  margin: 0 5px;
+  
+  color: ${colors.primary};
+`;
+
+export const LinkedinIcon = styled(FaLinkedin)`
+  height: 40px;
+  width: 40px;
+  
+  margin: 0 5px;
+  
+  color: ${colors.primary};
+`;
+
+export const TwitterIcon = styled(FaTwitter)`
+  height: 40px;
+  width: 40px;
+  
+  margin: 0 5px;
+  
+  color: ${colors.primary};
+`;
+
+export const EmailIcon = styled(MdEmail)`
+  height: 40px;
+  width: 40px;
+  
+  margin: 0 5px;
+  
+  color: ${colors.primary};
 `;
