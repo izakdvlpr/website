@@ -79,6 +79,10 @@ export const GithubIcon = styled(FaGithub)`
   margin: 0 5px;
   
   color: ${colors.primary};
+  
+  &:hover {
+    transform: scale(1.03);    
+  }
 `;
 
 export const LinkedinIcon = styled(FaLinkedin)`
@@ -88,6 +92,10 @@ export const LinkedinIcon = styled(FaLinkedin)`
   margin: 0 5px;
   
   color: ${colors.primary};
+  
+  &:hover {
+    transform: scale(1.03);    
+  }
 `;
 
 export const TwitterIcon = styled(FaTwitter)`
@@ -97,6 +105,10 @@ export const TwitterIcon = styled(FaTwitter)`
   margin: 0 5px;
   
   color: ${colors.primary};
+  
+  &:hover {
+    transform: scale(1.03);    
+  }
 `;
 
 export const EmailIcon = styled(MdEmail)`
@@ -106,4 +118,8 @@ export const EmailIcon = styled(MdEmail)`
   margin: 0 5px;
   
   color: ${colors.primary};
+  
+  &:hover {
+    transform: scale(1.03);    
+  }
 `;
