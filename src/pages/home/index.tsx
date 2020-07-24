@@ -16,7 +16,7 @@ import {
 
 const IndexPage = () => {
   return (
-    <Layout title="Meu portifolio :)">
+    <Layout title="Meu portfólio :)">
       <Container>
         <Logo src="/logo.gif" alt="zevdvlpr" />
         <Title>
