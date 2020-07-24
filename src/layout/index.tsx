@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Layout: React.FC<Props> = ({ children, title = "" }) => (
-  <div>
+  <>
     <Head>
       <meta charSet="utf-8" />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -16,12 +16,12 @@ const Layout: React.FC<Props> = ({ children, title = "" }) => (
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap"
         rel="stylesheet"
       ></link>
-      
-      <link rel="icon" href="https://avatars2.githubusercontent.com/u/44278486?v=4" />
-      <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/44278486?v=4" />
+
+      <link rel="icon" href="/logo.gif" />
+      <link rel="shortcut icon" href="/logo.gif" />
     </Head>
     {children}
-  </div>
+  </>
 );
 
 export default Layout;
