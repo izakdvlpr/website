@@ -1,7 +1,7 @@
 import React from "react";
 import { AppProps } from "next/app";
 
-import GlobalStyles from "../styles/GlobalStyles";
+import GlobalStyles from "../styles/global";
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>

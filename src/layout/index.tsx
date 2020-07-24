@@ -13,11 +13,14 @@ const Layout: React.FC<Props> = ({ children, title = "" }) => (
 
       <title>{title}</title>
       <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap"
         rel="stylesheet"
-      ></link>      
+      ></link>
+      
+      <link rel="icon" href="https://avatars2.githubusercontent.com/u/44278486?v=4" />
+      <link rel="shortcut icon" href="https://avatars2.githubusercontent.com/u/44278486?v=4" />
     </Head>
-    {children}  
+    {children}
   </div>
 );
 

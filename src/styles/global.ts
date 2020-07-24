@@ -1,5 +1,6 @@
-  
 import { createGlobalStyle } from "styled-components";
+
+import colors from "./colors";
 
 export default createGlobalStyle`
   * {
@@ -8,10 +9,12 @@ export default createGlobalStyle`
     
     box-sizing: border-box;    
     
-    font-family: 'Robot', sans-serif;
+    font-family: 'Raleway', sans-serif;
   }
   
   html, body #root {
-    height: 100%;    
+    height: 100%;   
+    
+    background-color: ${colors.background};
   }
 `;
