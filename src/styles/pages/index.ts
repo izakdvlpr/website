@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { lighten, shade } from "polished";
+import { lighten } from "polished";
 
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
