@@ -1,14 +1,14 @@
 {
-  "name": "with-typescript",
+  "name": "my-portifolio",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "run-s clean run",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "clean": "rimraf __next",
-    "run": "next",
-    "prettier": "prettier --check \"**/*.{ts,tsx}\"",
-    "prettier:fix": "prettier --write \"**/*.{ts,tsx}\""
+    "run": "next"
   },
   "dependencies": {
     "next": "latest",
@@ -24,11 +24,8 @@
     "@types/styled-components": "^5.1.0",
     "@zeit/next-source-maps": "^0.0.3",
     "next-compose-plugins": "^2.2.0",
-    "next-optimized-images": "^2.6.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "typescript": "3.7.3"
-  },
-  "license": "MIT"
+  }
 }

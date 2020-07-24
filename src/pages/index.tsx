@@ -1,14 +1,10 @@
 import React from 'react';
-import Layout from '../layout';
-
-import { Container } from '../styles/pages';
+import Layout from '@layout';
 
 const IndexPage = () => {
   return (
-    <Layout title="Home | zevdvlpr">
-      <Container>
-        Test
-      </Container>
+    <Layout>
+      <h1>hello world</h1>
     </Layout>
   );
 };
