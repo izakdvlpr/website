@@ -1,6 +1,6 @@
-const bundleAnalyzer = require("@next/bundle-analyzer");
-const sourceMaps = require("@zeit/next-source-maps");
-const composePlugins = require("next-compose-plugins");
+const bundleAnalyzer = require('@next/bundle-analyzer');
+const sourceMaps = require('@zeit/next-source-maps');
+const composePlugins = require('next-compose-plugins');
 
 module.exports = composePlugins(
   [
@@ -13,13 +13,13 @@ module.exports = composePlugins(
     ],
   ],
   {
-    distDir: "__next",
+    distDir: 'dist',
     devIndicators: {
       autoPrerender: false,
     },
     experimental: {
       jsconfigPaths: true,
     },
-    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif']
-  }
+    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+  },
 );

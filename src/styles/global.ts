@@ -1,20 +1,32 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-import colors from "./colors";
+import { shade } from 'polished';
 
-export default createGlobalStyle`
+export default createGlobalStyle`   
   * {
     padding: 0;
     margin: 0;
     
-    box-sizing: border-box;    
+    box-sizing: border-box;          
     
-    font-family: 'Raleway', sans-serif;
+    color: ${props => props.theme.colors.white};
   }
   
   html, body #root {
-    height: 100%;   
+    max-height: 100vh;           
+    max-width: 100vw;
     
-    background-color: ${colors.background};
+    height: 100%;           
+    width: 100%;
+  }  
+  
+  *, button, input {
+    border: 0;
+    background: none;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  html {
+    background-color: ${props => shade(0.25, props.theme.colors.background)};
   }
 `;

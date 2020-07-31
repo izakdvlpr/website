@@ -25,8 +25,9 @@
     "paths": {
       "@api/*": ["api/*"],
       "@components/*": ["components/*"],      
+      "@config/*": ["config/*"],
       "@layout": ["layout"],
-      "@styles/*": ["styles/pages/*"]
+      "@styles/*": ["styles/*"]
     }
   },
   "exclude": ["node_modules"],

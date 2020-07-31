@@ -1,3 +1,3 @@
-import Home from "./home";
+import Home from './Home';
 
-export default () => <Home />;
+export default Home;

@@ -1,0 +1,97 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:react/recommended",
+    "prettier/react",
+    "prettier/@typescript-eslint"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "prettier",
+    "@typescript-eslint",
+    "import-helpers"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-unused-expressions": "error",
+    "camelcase": "off",
+    "object-curly-newline": "off",
+    "comma-dangle": "off",
+    "arrow-parens": "off",
+    // "prettier/prettier": "error",
+    "global-require": "off",
+    "react/prop-types": "off",
+    "no-param-reassign": "off",
+    "no-unused-vars": "off",
+    "no-underscore-dangle": "off",
+    "implicit-arrow-linebreak": "off",
+    "indent": "off",
+    "linebreak-style": "off",
+    "import/no-unresolved": "off",
+    "operator-linebreak": "off",
+    "no-unused-expressions": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".tsx"]
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/prefer-default-export": "off",
+    "import/no-cycle": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^(react|next|styled-components)/",
+          "module",
+          "/^@/components/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
+  },
+  "settings": {
+    "import/extensions": ["js", "jsx", ".ts", ".tsx"],
+    "import/resolver": {
+      "typescript": {},
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
