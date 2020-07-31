@@ -33,7 +33,6 @@
   },
   "homepage": "https://github.com/zevdvlpr/my-portifolio#readme",
   "dependencies": {
-    "axios": "^0.19.2",
     "next": "latest",
     "polished": "^3.6.5",
     "react": "^16.12.0",
