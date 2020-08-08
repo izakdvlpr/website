@@ -6,12 +6,19 @@ import { lighten, shade } from 'polished';
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
+`;
+
+export const Section = styled.section`
+  width: 100vw;
+  height: 100vh;
 
   display: flex;
 
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  background-color: ${props => props.theme.colors.tertiary};
 `;
 
 export const Logo = styled.img`
@@ -21,18 +28,16 @@ export const Logo = styled.img`
   margin: 20px 0;
 
   border-radius: 50%;
+  box-shadow: ${props => lighten(0.1, props.theme.colors.primary)} 0px 10px 40px;
   border: 10px solid ${props => props.theme.colors.primary};
-  
-  &:hover {    
-    border: 10px solid ${props => shade(0.10, props.theme.colors.primary)};    
-  }
+  background-color: ${props => props.theme.colors.primary};
 `;
 
 export const Title = styled.h1`
   font-size: 40px;
 
   margin: 1rem 0;
-  
+
   > span {
     color: ${props => props.theme.colors.primary};
   }
@@ -77,13 +82,13 @@ const iconCSS = css`
   height: 40px;
   width: 40px;
 
-  margin: 0 5px;  
-  
+  margin-right: 5px;
+
   fill: ${props => props.theme.colors.primary};
 
   &:hover {
     transform: scale(1.03);
-    fill: ${props => shade(0.10, props.theme.colors.primary)};
+    fill: ${props => shade(0.1, props.theme.colors.primary)};
   }
 `;
 
@@ -92,7 +97,6 @@ export const GithubIcon = styled(Github)`
 `;
 
 export const LinkedinIcon = styled(Linkedin)`
-  color: red;
   ${iconCSS}
 `;
 

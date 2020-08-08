@@ -1,5 +1,5 @@
 {
-  "name": "my-portifolio",
+  "name": "zevdvlpr.ml",
   "description": "Meu portfólio nele eu conto mais sobre mim 😄",
   "version": "1.0.0",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zevdvlpr/my-portifolio.git"
+    "url": "git+https://github.com/zevdvlpr/zevdvlpr.ml.git"
   },
   "keywords": [
     "reactjs",
@@ -29,9 +29,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zevdvlpr/my-portifolio/issues"
+    "url": "https://github.com/zevdvlpr/zevdvlpr.ml/issues"
   },
-  "homepage": "https://github.com/zevdvlpr/my-portifolio#readme",
+  "homepage": "https://github.com/zevdvlpr/zevdvlpr.ml#readme",
   "dependencies": {
     "next": "latest",
     "polished": "^3.6.5",
