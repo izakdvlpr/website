@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { Github, Linkedin, Twitter, Email } from '@styles/icons';
+import { Github, Linkedin, Twitter } from '@styles/icons';
 import { lighten, shade } from 'polished';
 
 export const Container = styled.div`
@@ -101,9 +101,5 @@ export const LinkedinIcon = styled(Linkedin)`
 `;
 
 export const TwitterIcon = styled(Twitter)`
-  ${iconCSS}
-`;
-
-export const EmailIcon = styled(Email)`
   ${iconCSS}
 `;
