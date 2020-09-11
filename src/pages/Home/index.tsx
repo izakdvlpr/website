@@ -12,7 +12,7 @@ import {
   Icons,
   GithubIcon,
   LinkedinIcon,
-  TwitterIcon
+  TwitterIcon,
 } from '@styles/pages/index';
 
 const IndexPage = () => (
