@@ -1,7 +1,7 @@
+import { lighten, shade } from 'polished';
 import styled, { css } from 'styled-components';
 
 import { Github, Linkedin, Twitter, Email } from '@styles/icons';
-import { lighten, shade } from 'polished';
 
 export const Container = styled.div`
   width: 100vw;
