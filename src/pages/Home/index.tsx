@@ -12,8 +12,7 @@ import {
   Icons,
   GithubIcon,
   LinkedinIcon,
-  TwitterIcon,
-  EmailIcon,
+  TwitterIcon
 } from '@styles/pages/index';
 
 const IndexPage = () => (
@@ -38,9 +37,6 @@ const IndexPage = () => (
           </a>
           <a href="https://twitter.com/zevdvlpr">
             <TwitterIcon />
-          </a>
-          <a href="mailto:diego.schell.f@gmail.com">
-            <EmailIcon />
           </a>
         </Icons>
       </Section>
