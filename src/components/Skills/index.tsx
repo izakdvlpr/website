@@ -4,7 +4,7 @@ import { Container, Category, List, Item, ExternalLink } from './styles';
 
 const Skills: React.FC = () => {
   return (
-    <Container>
+    <Container id="skills">
       <Category>
         {'<'}Habilidades{' />'}
       </Category>

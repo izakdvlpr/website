@@ -27,8 +27,6 @@ export const List = styled.ul`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-
-  list-style: none;
 `;
 
 interface ItemProps {
@@ -46,9 +44,8 @@ export const Item = styled.li<ItemProps>`
   flex-direction: column;
   justify-content: center;
 
-  border-radius: 6px;
-
-  background-color: ${({ color }) => color};
+  border: 3px solid ${({ color }) => color};
+  bordber-radius: 6px;
 
   > h1 {
     font-size: 1.8rem;
@@ -75,7 +72,7 @@ export const Item = styled.li<ItemProps>`
   }
 
   @media (max-width: 320px) {
-    margin: 7px;
+    margin: 8px;
   }
 `;
 
