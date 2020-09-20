@@ -2,12 +2,11 @@ import { AppProps } from 'next/app';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import theme from '@config/theme';
-
-import GlobalStyles from '../styles/global';
+import colors from '@styles/colors';
+import GlobalStyles from '@styles/global';
 
 const App = ({ Component, pageProps }: AppProps) => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={colors}>
     <GlobalStyles />
     <Component {...pageProps} />
   </ThemeProvider>
