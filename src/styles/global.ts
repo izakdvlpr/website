@@ -27,18 +27,27 @@ export default createGlobalStyle`
     background: none;
   }
   
+  a {
+    text-decoration: none;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
   html {
     ::-webkit-scrollbar {
       width: 8px;
     }
     
-    ::-webkit-scrollbar-track {
-      background-color: ${({ theme }) => lighten(0.1, theme.primary)};
-    }
-    
-    ::-webkit-scrollbar-thumb {          
+    ::-webkit-scrollbar-thumb {     
+      border-radius: 8px;     
       background-color: ${({ theme }) => lighten(0.1, theme.secondary)};
     }
+    
+    ::-webkit-scrollbar-track {      
+      background-color: ${({ theme }) => lighten(0.1, theme.primary)};
+    }      
     
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -50,9 +59,5 @@ export default createGlobalStyle`
     scroll-behavior: smooth;
     
     background-color: ${({ theme }) => theme.secondary};
-  }
-  
-  a {
-    text-decoration: none;
-  }
+  }  
 `;
