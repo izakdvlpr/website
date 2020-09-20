@@ -17,8 +17,8 @@ const HomePage = () => (
     <Container>
       <Presentation />
       <About />
-      <Skills />
       <Projects />
+      <Skills />
       <Contact />
     </Container>
   </>
