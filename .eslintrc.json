@@ -80,7 +80,7 @@
         "alphabetize": { "order": "asc", "ignoreCase": true },
         "groups": [
           "module",          
-          "/^@(api|services)/",
+          "/^@(api|services|data)/",
           "/^@(interfaces|types)/",
           "/^@utils/",
           "/^@(components|styles)/",
