@@ -40,6 +40,13 @@ export default createGlobalStyle`
       background-color: ${({ theme }) => lighten(0.1, theme.secondary)};
     }
     
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
     scroll-behavior: smooth;
     
     background-color: ${({ theme }) => theme.secondary};
