@@ -6,4 +6,4 @@ export {
 
 export { MdEmail as Email } from 'react-icons/md';
 
-export { IoIosArrowDown as ArrowDown } from 'react-icons/io';
+export { IoIosArrowDropdownCircle as ArrowDown } from 'react-icons/io';
