@@ -72,8 +72,8 @@ export default class MyDocument extends Document {
             content="https://github.com/zevdvlpr.png"
           />
 
-          <link rel="icon" href="/icon.gif" />
-          <link rel="shortcut icon" href="/icon.gif" />
+          <link rel="icon" href="/icon.png" />
+          <link rel="shortcut icon" href="/favicon.png" />
 
           <link
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap"
