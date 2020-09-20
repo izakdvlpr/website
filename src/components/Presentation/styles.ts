@@ -102,11 +102,11 @@ export const ArrowDownIcon = styled(ArrowDown)`
   height: 60px;
   width: 60px;
 
-  margin-top: 80px;
+  margin-top: 60px;
 
   cursor: pointer;
 
-  fill: ${({ theme }) => lighten(0.3, theme.primary)};
+  fill: ${({ theme }) => theme.white};
 
   transform: translatey(0px);
   animation: ${soonFloating} 6s ease-in-out infinite;
