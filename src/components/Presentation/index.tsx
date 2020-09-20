@@ -27,15 +27,27 @@ const Presentation: React.FC = () => {
       <Divisor />
 
       <Icons>
-        <a href="https://github.com/zevdvlpr">
+        <a
+          href="https://github.com/zevdvlpr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <GithubIcon />
         </a>
 
-        <a href="https://www.linkedin.com/in/zevdvlpr/">
+        <a
+          href="https://www.linkedin.com/in/zevdvlpr/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <LinkedinIcon />
         </a>
 
-        <a href="https://twitter.com/zevdvlpr">
+        <a
+          href="https://twitter.com/zevdvlpr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <TwitterIcon />
         </a>
       </Icons>
