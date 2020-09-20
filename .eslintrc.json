@@ -79,9 +79,8 @@
         "newlinesBetween": "always",
         "alphabetize": { "order": "asc", "ignoreCase": true },
         "groups": [
-          "module",
-          "/^@(layout|config)/",
-          "/^@(api|services|store)/",
+          "module",          
+          "/^@(api|services)/",
           "/^@(interfaces|types)/",
           "/^@utils/",
           "/^@(components|styles)/",
