@@ -16,6 +16,7 @@ import {
 const Presentation: React.FC = () => {
   return (
     <Container>
+      {/* eslint-disable-next-line react/no-unescaped-entities */}
       <Title>I'm Zev.</Title>
 
       <Bio>
