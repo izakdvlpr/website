@@ -18,15 +18,10 @@
     "strict": true,
     "target": "esnext",
     "baseUrl": "./src",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./src/@types"
-    ],
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
     "paths": {
       "@api/*": ["api/*"],
-      "@components/*": ["components/*"],      
-      "@config/*": ["config/*"],
-      "@layout": ["layout"],
+      "@components/*": ["components/*"],
       "@styles/*": ["styles/*"]
     }
   },
