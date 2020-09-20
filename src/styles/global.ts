@@ -1,4 +1,4 @@
-import { shade } from 'polished';
+import { lighten } from 'polished';
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`   
@@ -6,9 +6,7 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
     
-    box-sizing: border-box;          
-    
-    color: ${props => props.theme.colors.white};
+    box-sizing: border-box;              
   }
   
   html, body #root {
@@ -20,12 +18,34 @@ export default createGlobalStyle`
   }  
   
   *, button, input {
-    border: 0;
+    border: 0;    
+    
+    font-family: 'Fira Code', monospace;
+    
+    color: ${({ theme }) => theme.white};    
+    
     background: none;
-    font-family: 'Raleway', sans-serif;
   }
   
   html {
-    background-color: ${props => shade(0.25, props.theme.colors.background)};
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background-color: ${({ theme }) => lighten(0.1, theme.primary)};
+    }
+    
+    ::-webkit-scrollbar-thumb {          
+      background-color: ${({ theme }) => lighten(0.1, theme.secondary)};
+    }
+    
+    scroll-behavior: smooth;
+    
+    background-color: ${({ theme }) => theme.secondary};
+  }
+  
+  a {
+    text-decoration: none;
   }
 `;
