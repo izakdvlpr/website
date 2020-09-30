@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import { projects } from '@data';
@@ -15,9 +16,11 @@ import {
 const Projects: React.FC = () => {
   return (
     <Container id="projects">
-      <Category>
-        {'<'}Projetos{' />'}
-      </Category>
+      <Link href="#projects">
+        <Category>
+          {'<'}Projects{' />'}
+        </Category>
+      </Link>
 
       <Column>
         {projects.map(project => (

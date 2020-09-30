@@ -1,5 +1,14 @@
 import { shade } from 'polished';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+import {
+  JavaScript,
+  HTML,
+  React,
+  Database,
+  Git,
+  Firebase,
+} from '@styles/icons';
 
 export const Container = styled.div`
   padding: 40px 80px;
@@ -16,6 +25,8 @@ export const Category = styled.h4`
   font-weight: 500;
 
   color: ${({ theme }) => theme.primary};
+
+  cursor: pointer;
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
@@ -35,7 +46,7 @@ interface ItemProps {
 
 export const Item = styled.li<ItemProps>`
   width: 450px;
-  height: 220px;
+  height: 240px;
 
   margin: 30px;
   padding: 30px;
@@ -45,10 +56,21 @@ export const Item = styled.li<ItemProps>`
   justify-content: center;
 
   border: 3px solid ${({ color }) => color};
-  bordber-radius: 6px;
+  border-radius: 6px;
 
   > h1 {
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+
     font-size: 1.8rem;
+
+    color: ${({ color }) => color};
+
+    svg {
+      margin-right: 10px;
+    }
   }
 
   > p {
@@ -76,6 +98,37 @@ export const Item = styled.li<ItemProps>`
   }
 `;
 
+const iconsCSS = css`
+  width: 35px;
+  height: 35px;
+
+  fill: ${({ color }) => color};
+`;
+
+export const JavaScriptIcon = styled(JavaScript)<ItemProps>`
+  ${iconsCSS}
+`;
+
+export const HTMLIcon = styled(HTML)<ItemProps>`
+  ${iconsCSS}
+`;
+
+export const ReactIcon = styled(React)<ItemProps>`
+  ${iconsCSS}
+`;
+
+export const DatabaseIcon = styled(Database)<ItemProps>`
+  ${iconsCSS}
+`;
+
+export const GitIcon = styled(Git)<ItemProps>`
+  ${iconsCSS}
+`;
+
+export const FirebaseIcon = styled(Firebase)<ItemProps>`
+  ${iconsCSS}
+`;
+
 interface LinkProps {
   color: string;
 }
@@ -86,7 +139,7 @@ export const ExternalLink = styled.a.attrs({
 })<LinkProps>`
   font-weight: 700;
 
-  color: ${({ theme }) => theme.white};
+  color: ${({ color }) => color};
 
   position: relative;
 
@@ -102,7 +155,7 @@ export const ExternalLink = styled.a.attrs({
 
     content: '';
 
-    background: ${({ color }) => shade(0.1, color)};
+    background: ${({ color }) => color};
     transition: width 0.3s ease, left 0.3s ease;
   }
 

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  height: 130vh;
+  height: 100vh;
+
   padding: 60px 100px;
 
   display: flex;
@@ -11,6 +12,8 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.secondary};
 
   @media (max-width: 768px) {
+    height: 100%;
+
     padding: 40px 50px;
   }
 `;
@@ -20,6 +23,8 @@ export const Category = styled.h4`
   font-weight: 500;
 
   color: ${({ theme }) => theme.primary};
+  
+  cursor: pointer;
 
   @media (max-width: 768px) {
     font-size: 0.9rem;

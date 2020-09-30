@@ -12,10 +12,14 @@ export const Container = styled.div`
 `;
 
 export const Category = styled.h4`
+  margin-bottom: 15px;
+
   font-size: 1.2rem;
   font-weight: 500;
 
   color: ${({ theme }) => theme.primary};
+
+  cursor: pointer;
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
@@ -36,7 +40,7 @@ export const Card = styled.li`
 
   border-radius: 6px;
 
-  border: 3px solid ${({ theme }) => shade(0.4, theme.primary)};
+  background-color: ${({ theme }) => shade(0.6, theme.secondary)};
 
   @media (max-width: 768px) {
     width: 100%;

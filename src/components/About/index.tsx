@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 import {
@@ -11,9 +12,11 @@ import {
 const About: React.FC = () => {
   return (
     <Container id="about">
-      <Category>
-        {'<'}Quem sou{' />'}
-      </Category>
+      <Link href="#about">
+        <Category>
+          {'<'}Quem sou{' />'}
+        </Category>
+      </Link>
 
       {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
       <Title>Fala Dev! 🚀</Title>
