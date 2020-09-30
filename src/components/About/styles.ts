@@ -23,7 +23,7 @@ export const Category = styled.h4`
   font-weight: 500;
 
   color: ${({ theme }) => theme.primary};
-  
+
   cursor: pointer;
 
   @media (max-width: 768px) {

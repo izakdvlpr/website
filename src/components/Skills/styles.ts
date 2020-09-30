@@ -101,32 +101,42 @@ export const Item = styled.li<ItemProps>`
 const iconsCSS = css`
   width: 35px;
   height: 35px;
-
-  fill: ${({ color }) => color};
 `;
 
 export const JavaScriptIcon = styled(JavaScript)<ItemProps>`
   ${iconsCSS}
+  
+  fill: ${({ color }) => color};
 `;
 
 export const HTMLIcon = styled(HTML)<ItemProps>`
   ${iconsCSS}
+  
+  fill: ${({ color }) => color};
 `;
 
 export const ReactIcon = styled(React)<ItemProps>`
   ${iconsCSS}
+  
+  fill: ${({ color }) => color};
 `;
 
 export const DatabaseIcon = styled(Database)<ItemProps>`
   ${iconsCSS}
+  
+  fill: ${({ color }) => color};
 `;
 
 export const GitIcon = styled(Git)<ItemProps>`
   ${iconsCSS}
+  
+  fill: ${({ color }) => color};
 `;
 
 export const FirebaseIcon = styled(Firebase)<ItemProps>`
   ${iconsCSS}
+  
+  fill: ${({ color }) => color};
 `;
 
 interface LinkProps {
