@@ -51,7 +51,7 @@
     "@zeit/next-source-maps": "0.0.3",
     "babel-plugin-styled-components": "1.10.7",
     "eslint": "7.5.0",
-    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-airbnb": "18.2.1",
     "eslint-config-prettier": "6.11.0",
     "eslint-import-resolver-typescript": "2.0.0",
     "eslint-plugin-import": "2.22.0",
