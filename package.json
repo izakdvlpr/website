@@ -34,7 +34,7 @@
   "homepage": "https://github.com/zevdvlpr/zevdvlpr.ml#readme",
   "dependencies": {
     "next": "latest",
-    "polished": "3.6.5",
+    "polished": "3.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-icons": "3.10.0",
