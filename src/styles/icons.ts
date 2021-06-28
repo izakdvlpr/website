@@ -2,13 +2,26 @@ export {
   FaGithub as Github,
   FaLinkedin as Linkedin,
   FaTwitter as Twitter,
-  FaJs as JavaScript,
-  FaHtml5 as HTML,
-  FaReact as React,
-  FaDatabase as Database,
-  FaGitAlt as Git,
-  FaFire as Firebase,
+  FaDiscord as Discord,
 } from 'react-icons/fa';
+
+export {
+  SiHtml5 as HTML,
+  SiCss3 as CSS,
+  SiJavascript as JavaScript,
+  SiTypescript as TypeScript,
+  SiNodeDotJs as NodeJs,
+  SiPython as Python,
+  SiReact as React,
+  SiGit as Git,
+  SiPostgresql as Postgres,
+  SiMongodb as Mongodb,
+  SiFirebase as Firebase,
+  SiMysql as Mysql,
+  SiRuby as Ruby,
+  SiGo as Go,
+  SiElixir as Elixir,
+} from 'react-icons/si';
 
 export { MdEmail as Email } from 'react-icons/md';
 

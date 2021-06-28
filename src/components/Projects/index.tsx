@@ -1,28 +1,26 @@
-import Link from 'next/link';
 import React from 'react';
 
 import { projects } from '@data';
 
+import Title from '@components/Title';
+
 import {
   Container,
-  Category,
-  Column,
+  Content,
   Card,
   CardImage,
   CardContent,
   CardFooter,
+  Button,
+  GithubIcon,
 } from './styles';
 
 const Projects: React.FC = () => {
   return (
-    <Container id="projects">
-      <Link href="#projects">
-        <Category>
-          {'<'}Projects{' />'}
-        </Category>
-      </Link>
+    <Container>
+      <Title style={{ margin: '64px 0px 30px 0px' }}>Projetos</Title>
 
-      <Column>
+      <Content>
         {projects.map(project => (
           <Card key={project.name}>
             <CardImage src={project.image} alt="card image" />
@@ -45,7 +43,17 @@ const Projects: React.FC = () => {
             </CardFooter>
           </Card>
         ))}
-      </Column>
+      </Content>
+
+      <a
+        href="https://github.com/zevdvlpr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button>
+          Veja mais em <GithubIcon />
+        </Button>
+      </a>
     </Container>
   );
 };

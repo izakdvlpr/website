@@ -1,5 +1,20 @@
 const projects = [
   {
+    name: 'Drocsid',
+    description: 'Drocsid é um chat virtual, para conversar com amigos.',
+    image: '/static/images/drocsid-screenshot.jpg',
+    github_page: 'https://github.com/zevdvlpr/drocsid',
+    tags: ['ReactJS', 'NodeJS', 'ExpressJS', 'TypeScript', 'API'],
+  },
+  {
+    name: 'Animeline',
+    description:
+      'Um site para assistir animes sem propaganda, totalmente gratuito.',
+    image: '/static/images/animeline-screenshot.jpg',
+    github_page: 'https://github.com/zevdvlpr/animesline',
+    tags: ['ReactJS', 'TypeScript', 'Monorepo'],
+  },
+  {
     name: 'Orangutan',
     description:
       'Orangutan é um bot feito para o aplicativo de bate-papo Discord. Sua função é gerenciar e proteger sua comunidade do Discord deixando à mais alegre de pessoas espaçosas.',
@@ -13,90 +28,46 @@ const projects = [
       'Meu site (sim, este) é onde eu mostro minhas habilidades, trabalho e qualquer outra coisa que eu decida colocar aqui.',
     image: '/static/images/zevdvlpr-screenshot.jpg',
     github_page: 'https://github.com/zevdvlpr/zevdvlpr.ml',
-    tags: [
-      'ReactJS',
-      'NextJS',
-      'TypeScript',
-      'Styled Components',
-      'PostgresSQL',
-    ],
-  },
-  {
-    name: 'Drocsid',
-    description: 'Drocsid é um chat virtual, para conversar com amigos.',
-    image: '/static/images/drocsid-screenshot.jpg',
-    github_page: 'https://github.com/zevdvlpr/drocsid',
-    tags: ['ReactJS', 'NodeJS', 'ExpressJS', 'TypeScript', 'API'],
+    tags: ['ReactJS', 'NextJS', 'TypeScript', 'Styled Components'],
   },
 ];
 
-const skills = [
+const skills = {
+  focus: [
+    'TypeScript',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'React',
+    'NodeJs',
+    'Postgres',
+    'MongoDB',
+    'Git',
+  ],
+  outhers: ['Python', 'Ruby', 'Go', 'Elixir'],
+};
+
+const socialNetworks = [
   {
-    color: '#EFD81D',
-    icon: 'JavaScript',
-    title: 'JavaScript',
-    description:
-      'Aprendi JavaScript como minha primeira linguagem de programação com a Rocketseat. Gosto muito de trabalhar com JavaScript no Front-End e no Back-End, especificamente no Node.JS. JS é tão legal que você pode criar um site e até mesmo apps mobile com apenas uma linguagem.',
-    links: [
-      {
-        label: 'Rocketseat',
-        redirect: 'https://youtube.com/rocketseat',
-      },
-    ],
+    name: 'Github',
+    link: 'https://github.com/zevdvlpr',
+    description: 'My github profile',
   },
   {
-    color: '#DD4B25',
-    icon: 'HTML',
-    title: 'HTML/CSS',
-    description:
-      'HTML e CSS são essenciais para o Front-End. De que outra forma você espera criar um site? Enquanto todos nós odiamos CSS, ainda é o padrão e com boas razões. Ah, e HTML não é uma linguagem de programção :c',
-    links: [],
+    name: 'Linkedin',
+    link: 'https://www.linkedin.com/in/zevdvlpr/',
+    description: 'My linkedin profile',
   },
   {
-    color: '#37D1F7',
-    icon: 'React',
-    title: 'React',
-    description:
-      'React JS e React Native são absolutamente incríveis. É a única coisa boa que o Facebook trouxe para este mundo. Se eu for criar um site, provavelmente o construirei com o React JS, porque o HTML simples para a web é doloroso demais.',
-    links: [],
+    name: 'Twitter',
+    link: 'https://twitter.com/zevdvlpr',
+    description: 'My twitter profile',
   },
   {
-    color: '#61AE51',
-    icon: 'Database',
-    title: 'MongoDB',
-    description:
-      'O MongoDB é ótimo. Sem bancos de dados baseados em documentos, eu ficaria preso no MySQL. O MongoDB é muito fácil recomendo bastante para quem está iniciando na sua carreira como desenvolvedor(a).',
-    links: [],
-  },
-  {
-    color: '#00718B',
-    icon: 'Database',
-    title: 'MySQL',
-    description:
-      'As tabelas... são legais até, só que eu prefiro usar bancos de dados NoSQL (depende do projeto) baseados em documentos. Não me interpretem mal, os bancos de dados relacionais ainda são úteis, e eu estou perfeitamente bem em trabalhar com eles.',
-    links: [],
-  },
-  {
-    color: '#F7C52D',
-    icon: 'Firebase',
-    title: 'Firebase',
-    description:
-      'O Google pensou muito bem em criar um banco de dados NoSQL desse tipo, gosto bastante de implementar Firebase nos meus projetos principalmente no Front-End que ajuda bastante.',
-    links: [],
-  },
-  {
-    color: '#E94E31',
-    icon: 'Git',
-    title: 'Git',
-    description:
-      'Que tipo de desenvolvedor não usa o Git? É essencial para praticamente qualquer projeto. O Git é ótimo no que faz, pois é um sistema muito maduro. Ooh! Quase esqueci de Meu Github! Confira :)',
-    links: [
-      {
-        label: 'Meu Github',
-        redirect: 'https://github.com/zevdvlpr',
-      },
-    ],
+    name: 'Discord',
+    link: 'https://discord.com/users/461273822360895491',
+    description: 'My discord profile',
   },
 ];
 
-export { projects, skills };
+export { projects, skills, socialNetworks };

@@ -1,42 +1,30 @@
-import Link from 'next/link';
-import React from 'react';
+/* eslint-disable import/extensions */
 
-import {
-  Container,
-  Category,
-  Title,
-  Description,
-  ExternalLink,
-} from './styles';
+import React from 'react';
+import ReactMarkdown from 'react-markdown';
+
+import Title from '@components/Title';
+
+import { useTranslation } from '../../../i18n';
+import { Container, Content, SubTitle, Description } from './styles';
 
 const About: React.FC = () => {
+  const { t } = useTranslation('about');
+
   return (
     <Container id="about">
-      <Link href="#about">
-        <Category>
-          {'<'}Quem sou{' />'}
-        </Category>
-      </Link>
+      <Title style={{ marginTop: 70 }}>{t('title')}</Title>
 
-      {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
-      <Title>Fala Dev! 🚀</Title>
+      <Content>
+        <SubTitle>{t('subTitle')}</SubTitle>
 
-      <Description>
-        Prazer Izak, 17, mais pode me chamar de{' '}
-        <ExternalLink href="https://github.com/zevdvlpr">Zev</ExternalLink>. Me
-        interessei pela área de <i>Desenvolvimento de Software</i> aos 15 anos
-        com a linguagem Javascript. Comecei programando <b>bots para Discord</b>
-        , mais eu sempre admirei projetos na Web e principalmente no Mobile.
-        <br />
-        <br />
-        Com o passar do tempo eu conheci a{' '}
-        <ExternalLink href="https://youtube.com/rocketseat">
-          Rocketseat
-        </ExternalLink>
-        , foi quando eu me apaixonei por JavaScript e conheci as melhores
-        tecnologias, Node Js, React Js e React Native e todo o ecossistema por
-        volta dessas tecnologias às quais eu trabalho hoje.
-      </Description>
+        <Description>
+          <ReactMarkdown
+            children={String(t('description'))}
+            allowDangerousHtml
+          />
+        </Description>
+      </Content>
     </Container>
   );
 };

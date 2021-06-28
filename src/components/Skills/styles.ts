@@ -2,176 +2,173 @@ import { shade } from 'polished';
 import styled, { css } from 'styled-components';
 
 import {
+  TypeScript,
   JavaScript,
+  CSS,
   HTML,
   React,
-  Database,
+  NodeJs,
+  Python,
+  Postgres,
+  Mongodb,
   Git,
-  Firebase,
+  Ruby,
+  Go,
+  Elixir,
 } from '@styles/icons';
 
-export const Container = styled.div`
-  padding: 40px 80px;
+export const Container = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  background-color: ${({ theme }) => shade(0.3, theme.secondary)};
+  background: ${({ theme }) => shade(0.3, theme.secondary)};
+`;
 
-  @media (max-width: 768px) {
-    padding: 40px 50px;
+export const Content = styled.div`
+  width: 100%;
+  max-width: 760px;
+
+  margin-bottom: 168px;
+  padding: 0px 24px;
+`;
+
+export const SubTitle = styled.h2`
+  margin: 40px 0;
+
+  position: relative;
+
+  font-size: 24px;
+  font-weight: 400;
+
+  &::before,
+  &::after {
+    width: 32px;
+    height: 1px;
+
+    margin: 0px 16px;
+
+    position: absolute;
+    top: 50%;
+
+    content: '';
+
+    transform: translateY(-50%);
+
+    background-color: ${({ theme }) => theme.primary};
+
+    border-radius: 1px;
+  }
+
+  @media (max-width: 500px) {
+    display: flex;
+    justify-content: center;
+
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+
+  &:first-child {
+    text-align: left;
+
+    &::before {
+      content: none;
+    }
+  }
+
+  &:nth-child(3) {
+    text-align: right;
+
+    &::after {
+      right: 240px;
+    }
+
+    &::before {
+      content: none;
+    }
   }
 `;
 
-export const Category = styled.h4`
-  font-size: 1.2rem;
-  font-weight: 500;
-
-  color: ${({ theme }) => theme.primary};
-
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-  }
-`;
-
-export const List = styled.ul`
+export const SkillsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 `;
 
-interface ItemProps {
-  color?: string;
-}
+export const SkiilItem = styled.div`
+  margin: 25px;
 
-export const Item = styled.li<ItemProps>`
-  width: 450px;
-  height: 240px;
+  svg {
+    filter: grayscale(100%) opacity(80%);
 
-  margin: 30px;
-  padding: 30px;
+    transition: filter 0.3s ease-out;
+  }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  border: 3px solid ${({ color }) => color};
-  border-radius: 6px;
-
-  > h1 {
-    margin-bottom: 10px;
-
-    display: flex;
-    align-items: center;
-
-    font-size: 1.8rem;
-
-    color: ${({ color }) => color};
-
+  &:hover {
     svg {
-      margin-right: 10px;
+      filter: none;
     }
-  }
-
-  > p {
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 100%;
-
-    margin: 15px;
-    margin: 25px 30px;
-
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    p {
-      font-size: 0.7rem;
-    }
-  }
-
-  @media (max-width: 320px) {
-    margin: 8px;
   }
 `;
 
 const iconsCSS = css`
-  width: 35px;
-  height: 35px;
+  width: 90px;
+  height: 90px;
+
+  fill: ${({ theme }) => theme.primary};
 `;
 
-export const JavaScriptIcon = styled(JavaScript)<ItemProps>`
-  ${iconsCSS}
-  
-  fill: ${({ color }) => color};
+export const TypeScriptIcon = styled(TypeScript)`
+  ${iconsCSS};
 `;
 
-export const HTMLIcon = styled(HTML)<ItemProps>`
-  ${iconsCSS}
-  
-  fill: ${({ color }) => color};
+export const JavaScriptIcon = styled(JavaScript)`
+  ${iconsCSS};
 `;
 
-export const ReactIcon = styled(React)<ItemProps>`
-  ${iconsCSS}
-  
-  fill: ${({ color }) => color};
+export const HTMLIcon = styled(HTML)`
+  ${iconsCSS};
 `;
 
-export const DatabaseIcon = styled(Database)<ItemProps>`
-  ${iconsCSS}
-  
-  fill: ${({ color }) => color};
+export const CSSIcon = styled(CSS)`
+  ${iconsCSS};
 `;
 
-export const GitIcon = styled(Git)<ItemProps>`
-  ${iconsCSS}
-  
-  fill: ${({ color }) => color};
+export const ReactIcon = styled(React)`
+  ${iconsCSS};
 `;
 
-export const FirebaseIcon = styled(Firebase)<ItemProps>`
-  ${iconsCSS}
-  
-  fill: ${({ color }) => color};
+export const NodeJsIcon = styled(NodeJs)`
+  ${iconsCSS};
 `;
 
-interface LinkProps {
-  color: string;
-}
+export const PythonIcon = styled(Python)`
+  ${iconsCSS};
+`;
 
-export const ExternalLink = styled.a.attrs({
-  target: '_blank',
-  rel: 'noopener noreferrer',
-})<LinkProps>`
-  font-weight: 700;
+export const PostgresIcon = styled(Postgres)`
+  ${iconsCSS};
+`;
 
-  color: ${({ color }) => color};
+export const MongodbIcon = styled(Mongodb)`
+  ${iconsCSS};
+`;
 
-  position: relative;
+export const GitIcon = styled(Git)`
+  ${iconsCSS};
+`;
 
-  &::after {
-    height: 0.2rem;
-    width: 0;
+export const RubyIcon = styled(Ruby)`
+  ${iconsCSS};
+`;
 
-    margin-top: -0.2rem !important;
-    display: block;
+export const GoIcon = styled(Go)`
+  ${iconsCSS};
+`;
 
-    position: absolute;
-    left: 0;
-
-    content: '';
-
-    background: ${({ color }) => color};
-    transition: width 0.3s ease, left 0.3s ease;
-  }
-
-  &:hover::after {
-    width: 100%;
-
-    left: 0;
-  }
+export const ElixirIcon = styled(Elixir)`
+  ${iconsCSS};
 `;

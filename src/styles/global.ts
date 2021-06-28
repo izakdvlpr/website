@@ -18,7 +18,8 @@ export default createGlobalStyle`
   }  
   
   *, button, input {
-    border: 0;    
+    border: none;  
+    outline: none;  
     
     font-family: 'Fira Code', monospace;
     

@@ -2,10 +2,11 @@
   "compilerOptions": {
     "allowJs": true,
     "alwaysStrict": true,
+    "baseUrl": "./src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "preserve",    
     "lib": ["dom", "es2017"],
     "module": "esnext",
     "moduleResolution": "node",
@@ -13,19 +14,18 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext",
-    "baseUrl": "./src",
-    "typeRoots": ["./node_modules/@types", "./src/@types"],
     "paths": {
       "@api/*": ["api/*"],
       "@components/*": ["components/*"],
       "@data": ["data"],
       "@styles/*": ["styles/*"]
-    }
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "esnext",
+    "typeRoots": ["./node_modules/@types", "./src/@types"]
   },
   "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts"]
 }

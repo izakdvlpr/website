@@ -1,38 +1,27 @@
 import { shade } from 'polished';
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  padding: 40px 80px;
+import { Github } from '@styles/icons';
+
+export const Container = styled.section`
+  padding-bottom: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   background-color: ${({ theme }) => shade(0.2, theme.secondary)};
-
-  @media (max-width: 768px) {
-    padding: 40px 50px;
-  }
 `;
 
-export const Category = styled.h4`
-  margin-bottom: 15px;
+export const Content = styled.div`
+  padding: 40px 80px;
 
-  font-size: 1.2rem;
-  font-weight: 500;
-
-  color: ${({ theme }) => theme.primary};
-
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-  }
-`;
-
-export const Column = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 `;
 
-export const Card = styled.li`
+export const Card = styled.div`
   width: 45%;
   height: 45%;
 
@@ -110,4 +99,43 @@ export const CardFooter = styled.div`
       font-size: 0.8rem;
     }
   }
+`;
+
+export const Button = styled.button`
+  padding: 10px 20px;
+
+  display: flex;
+  align-items: center;
+
+  border: 3px solid ${({ theme }) => theme.primary};
+  border-radius: 30px;
+
+  font-size: 16px;
+
+  color: ${({ theme }) => theme.primary};
+
+  background: ${({ theme }) => shade(0.4, theme.secondary)};
+
+  cursor: pointer;
+
+  &:hover {
+    color: ${({ theme }) => theme.white};
+
+    transition: 0.2s;
+
+    background: ${({ theme }) => theme.primary};
+
+    svg {
+      fill: ${({ theme }) => theme.white};
+    }
+  }
+`;
+
+export const GithubIcon = styled(Github)`
+  width: 30px;
+  height: 30px;
+
+  margin-left: 15px;
+
+  fill: ${({ theme }) => theme.primary};
 `;

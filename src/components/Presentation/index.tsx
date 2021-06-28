@@ -1,60 +1,77 @@
-import Link from 'next/link';
+/* eslint-disable import/extensions */
+
 import React from 'react';
 
+import { socialNetworks } from '@data';
+
+import { useTranslation } from '../../../i18n';
 import {
   Container,
   Title,
   Bio,
   Divisor,
   Icons,
+  ExternalLink,
   GithubIcon,
   LinkedinIcon,
   TwitterIcon,
+  DiscordIcon,
   ArrowDownIcon,
 } from './styles';
 
 const Presentation: React.FC = () => {
+  const { t } = useTranslation('presentation');
+
+  const handleNextSection = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) => {
+    event.preventDefault();
+
+    return document.getElementById('about')?.scrollIntoView();
+  };
+
+  const getIcon = (name: string) => {
+    const icons = [
+      {
+        name: 'Github',
+        icon: <GithubIcon />,
+      },
+      {
+        name: 'Linkedin',
+        icon: <LinkedinIcon />,
+      },
+      {
+        name: 'Twitter',
+        icon: <TwitterIcon />,
+      },
+      {
+        name: 'Discord',
+        icon: <DiscordIcon />,
+      },
+    ];
+
+    return icons.find(icon => icon.name === name)?.icon;
+  };
+
   return (
     <Container>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
-      <Title>I'm Zev.</Title>
+      <Title>{t('title')}</Title>
 
-      <Bio>
-        Programador Full Stack <b>&</b> Apaixonado por Javascript, Tecnologia e
-        Pizza.
-      </Bio>
+      <Bio>{t('bio')}</Bio>
 
       <Divisor />
 
       <Icons>
-        <a
-          href="https://github.com/zevdvlpr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon />
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/zevdvlpr/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedinIcon />
-        </a>
-
-        <a
-          href="https://twitter.com/zevdvlpr"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <TwitterIcon />
-        </a>
+        {socialNetworks.map(social => (
+          <ExternalLink key={social.name} href={social.link}>
+            {getIcon(social.name)}
+          </ExternalLink>
+        ))}
       </Icons>
 
-      <Link href="#about">
+      <a href="#about" aria-label="next section" onClick={handleNextSection}>
         <ArrowDownIcon />
-      </Link>
+      </a>
     </Container>
   );
 };

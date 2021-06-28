@@ -1,104 +1,116 @@
-import Link from 'next/link';
+/* eslint-disable import/extensions */
+
 import React from 'react';
 
 import { skills } from '@data';
 
+import Title from '@components/Title';
+
+import { useTranslation } from '../../../i18n';
 import {
   Container,
-  Category,
-  List,
-  Item,
+  Content,
+  SubTitle,
+  SkillsContainer,
+  SkiilItem,
+  TypeScriptIcon,
   JavaScriptIcon,
   HTMLIcon,
+  CSSIcon,
   ReactIcon,
-  DatabaseIcon,
+  NodeJsIcon,
+  PythonIcon,
+  PostgresIcon,
+  MongodbIcon,
   GitIcon,
-  FirebaseIcon,
-  ExternalLink,
+  RubyIcon,
+  GoIcon,
+  ElixirIcon,
 } from './styles';
 
-const getIcon = (name: string, color: string) => {
-  switch (name) {
-    case 'JavaScript':
-      return <JavaScriptIcon color={color} />;
-    case 'HTML':
-      return <HTMLIcon color={color} />;
-    case 'React':
-      return <ReactIcon color={color} />;
-    case 'Database':
-      return <DatabaseIcon color={color} />;
-    case 'Git':
-      return <GitIcon color={color} />;
-    case 'Firebase':
-      return <FirebaseIcon color={color} />;
-    default:
-      return null;
-  }
-};
-
-const formatDescription = (
-  description: string,
-  color: string,
-  link: {
-    label: string;
-    redirect: string;
-  },
-) => {
-  if (!description) {
-    return description;
-  }
-
-  return (
-    <p>
-      {description
-        .split(link.label)
-        .reduce((prev: any, current: any, i: any) => {
-          if (!i) {
-            return [current];
-          }
-
-          return prev.concat(
-            <ExternalLink
-              key={link.label + current}
-              href={link.redirect}
-              color={color}
-            >
-              {link.label}
-            </ExternalLink>,
-            current,
-          );
-        }, [])}
-    </p>
-  );
-};
-
 const Skills: React.FC = () => {
-  return (
-    <Container id="skills">
-      <Link href="#skills">
-        <Category>
-          {'<'}Skills{' />'}
-        </Category>
-      </Link>
+  const { t } = useTranslation('skills');
 
-      <List>
-        {skills.map(item => (
-          <Item key={item.title} color={item.color}>
-            <h1>
-              {getIcon(item.icon, item.color)} {item.title}
-            </h1>
-            <p>
-              {item.links.length === 0
-                ? item.description
-                : formatDescription(
-                    item.description,
-                    item.color,
-                    item.links[0],
-                  )}
-            </p>
-          </Item>
-        ))}
-      </List>
+  const getIcon = (name: string) => {
+    const icons = [
+      {
+        name: 'TypeScript',
+        icon: <TypeScriptIcon />,
+      },
+      {
+        name: 'JavaScript',
+        icon: <JavaScriptIcon />,
+      },
+      {
+        name: 'HTML',
+        icon: <HTMLIcon />,
+      },
+      {
+        name: 'CSS',
+        icon: <CSSIcon />,
+      },
+      {
+        name: 'React',
+        icon: <ReactIcon />,
+      },
+      {
+        name: 'NodeJs',
+        icon: <NodeJsIcon />,
+      },
+      {
+        name: 'Postgres',
+        icon: <PostgresIcon />,
+      },
+      {
+        name: 'MongoDB',
+        icon: <MongodbIcon />,
+      },
+      {
+        name: 'Git',
+        icon: <GitIcon />,
+      },
+      {
+        name: 'Python',
+        icon: <PythonIcon />,
+      },
+      {
+        name: 'Ruby',
+        icon: <RubyIcon />,
+      },
+      {
+        name: 'Go',
+        icon: <GoIcon />,
+      },
+      {
+        name: 'Elixir',
+        icon: <ElixirIcon />,
+      },
+    ];
+
+    return icons.find(icon => icon.name === name)?.icon;
+  };
+
+  return (
+    <Container>
+      <Title style={{ margin: '64px 0px 30px 0px' }}>{t('title')}</Title>
+
+      <Content>
+        <SubTitle>{t('subTitles.skills')}</SubTitle>
+
+        <SkillsContainer>
+          {skills.focus.map(item => (
+            <SkiilItem key={item}>{getIcon(item)}</SkiilItem>
+          ))}
+        </SkillsContainer>
+
+        <SubTitle>{t('subTitles.outhers')}</SubTitle>
+
+        <SkillsContainer>
+          {skills.outhers.map(item => (
+            <SkiilItem key={item}>{getIcon(item)}</SkiilItem>
+          ))}
+        </SkillsContainer>
+      </Content>
     </Container>
   );
 };

@@ -1,7 +1,7 @@
 import { lighten, rgba } from 'polished';
 import styled, { css, keyframes } from 'styled-components';
 
-import { Github, Linkedin, Twitter, ArrowDown } from '@styles/icons';
+import { Github, Linkedin, Twitter, Discord, ArrowDown } from '@styles/icons';
 
 export const Container = styled.section`
   height: 100vh;
@@ -17,11 +17,11 @@ export const Container = styled.section`
 `;
 
 export const Title = styled.h1`
-  font-size: 9rem;
+  font-size: 140px;
   font-weight: 900;
 
   @media (max-width: 768px) {
-    font-size: 3rem;
+    font-size: 40px;
   }
 `;
 
@@ -57,6 +57,11 @@ export const Icons = styled.div`
   justify-content: center;
 `;
 
+export const ExternalLink = styled.a.attrs({
+  target: '_blank',
+  rel: 'noopener noreferrer',
+})``;
+
 const iconCSS = css`
   height: 40px;
   width: 40px;
@@ -73,15 +78,19 @@ const iconCSS = css`
 `;
 
 export const GithubIcon = styled(Github)`
-  ${iconCSS}
+  ${iconCSS};
 `;
 
 export const LinkedinIcon = styled(Linkedin)`
-  ${iconCSS}
+  ${iconCSS};
 `;
 
 export const TwitterIcon = styled(Twitter)`
-  ${iconCSS}
+  ${iconCSS};
+`;
+
+export const DiscordIcon = styled(Discord)`
+  ${iconCSS};
 `;
 
 const soonFloating = keyframes`

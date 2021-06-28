@@ -1,25 +1,18 @@
-const bundleAnalyzer = require('@next/bundle-analyzer');
-const sourceMaps = require('@zeit/next-source-maps');
-const composePlugins = require('next-compose-plugins');
+const { nextI18NextRewrites } = require('next-i18next/rewrites');
 
-module.exports = composePlugins(
-  [
-    [sourceMaps],
-    [
-      bundleAnalyzer,
-      {
-        enabled: !!process.env.ANALYZE,
-      },
-    ],
-  ],
-  {
-    distDir: 'dist',
-    devIndicators: {
-      autoPrerender: false,
-    },
-    experimental: {
-      jsconfigPaths: true,
-    },
-    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+const localeSubpaths = {};
+
+module.exports = {
+  rewrites: async () => nextI18NextRewrites(localeSubpaths),
+  publicRuntimeConfig: {
+    localeSubpaths,
   },
-);
+  distDir: 'dist',
+  devIndicators: {
+    autoPrerender: false,
+  },
+  experimental: {
+    jsconfigPaths: true,
+  },
+  handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+};
