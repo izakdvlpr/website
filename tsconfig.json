@@ -1,19 +1,32 @@
 {
+  "include": ["next-env.d.ts", "src/**/*"],
+  "exclude": ["node_modules", "build", "**/*.js"],
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "target": "ES6",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "strict": true,
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
-  },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+    "strictNullChecks": true,
+    "resolveJsonModule": true,
+    "noImplicitReturns": true,
+    "noUnusedParameters": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": ["src/@types", "node_modules/@types"],
+    "lib": ["ES6", "DOM", "ES2016", "ES2020", "ESNext"],
+    "paths": {
+      "@components/*": ["src/components/*"]
+    }
+  }
 }
