@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "fix": "yarn format:fix && yarn lint:fix",
+    "lint": "eslint ./ --ext js,jsx,ts,tsx",
+    "lint:fix": "eslint ./ --ext js,jsx,ts,tsx --fix",
+    "format": "prettier --check ./**/*.{js,jsx,ts,tsx}",
+    "format:fix": "prettier --write ./**/*.{js,jsx,ts,tsx}",
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "eslint ./ --ext ts,tsx",
-    "lint:fix": "eslint ./ --ext ts,tsx --fix",
-    "prettier": "prettier --check ./**/*.{ts,tsx}",
-    "prettier:fix": "prettier --write ./**/*.{ts,tsx}"
+    "start": "next start"
   },
   "dependencies": {
     "next": "11.1.0",
