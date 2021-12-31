@@ -1,5 +1,7 @@
-function Home(): JSX.Element {
-  return <h1>Hello, world!</h1>;
+import { Main } from '@components/organisms/Main';
+
+function MainPage(): JSX.Element {
+  return <Main />;
 }
 
-export default Home;
+export default MainPage;
