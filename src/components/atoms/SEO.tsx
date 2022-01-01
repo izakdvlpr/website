@@ -10,7 +10,7 @@ interface IProps {
 
 export function SEO({
   title = "Hey, I'm Izak :)",
-  description = 'Skye um bot brasileiro desenvolvido para gerenciar servidores de Discord.',
+  description = 'Full Stack Programmer | Passionate about Javascript, Technology and Pizza.',
   children,
 }: TPropsWithChildren<IProps>): JSX.Element {
   return (
