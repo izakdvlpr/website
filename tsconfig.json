@@ -5,7 +5,7 @@
   ],
   "exclude": [
     "node_modules",
-    "build",
+    ".next",
     "**/*.js"
   ],
   "compilerOptions": {
