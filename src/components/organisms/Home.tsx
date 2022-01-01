@@ -1,3 +1,11 @@
+import { Box } from '@chakra-ui/react';
+
+import { Header } from '@components/molecules/Header';
+
 export function Home(): JSX.Element {
-  return <h1>Hello, world!</h1>;
+  return (
+    <Box>
+      <Header />
+    </Box>
+  );
 }
