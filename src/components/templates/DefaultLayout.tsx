@@ -1,3 +1,5 @@
+import { Flex } from '@chakra-ui/react';
+
 import { SEO } from '@components/atoms/SEO';
 import { TPropsWithChildren } from '@interfaces/react';
 
@@ -6,7 +8,9 @@ export function DefaultLayout({ children }: TPropsWithChildren): JSX.Element {
     <>
       <SEO />
 
-      {children}
+      <Flex as="main" flexDir="column">
+        {children}
+      </Flex>
     </>
   );
 }
