@@ -6,14 +6,14 @@ export interface INavigation {
 export const navigation: INavigation[] = [
   {
     name: 'About',
-    href: '/',
+    href: '/about',
   },
   {
     name: 'Blog',
-    href: '/',
+    href: '/blog',
   },
   {
     name: 'Contact',
-    href: '/',
+    href: '#contact',
   },
 ];
