@@ -1,5 +1,11 @@
-export const styles: Record<string, any> = {
+export const styles = {
   global: {
+    '*:focus': {
+      boxShadow: 'none !important',
+    },
+    'html': {
+      'scroll-behavior': 'smooth',
+    },
     'body': {
       color: 'black',
     },
@@ -7,9 +13,6 @@ export const styles: Record<string, any> = {
       _hover: {
         textDecoration: 'none',
       },
-    },
-    '*:focus': {
-      boxShadow: 'none !important',
     },
   },
 };

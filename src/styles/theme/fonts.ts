@@ -1,4 +1,4 @@
-export const fonts: Record<string, string> = {
+export const fonts = {
   body: 'Fira Code',
   heading: 'Fira Code',
 };
