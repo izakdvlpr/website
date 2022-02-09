@@ -18,7 +18,7 @@ export function Home(): JSX.Element {
         w="100%"
         maxW={1240}
         px={{ base: 10, md: 48 }}
-        m="9rem auto"
+        m="15rem auto 10rem auto"
         justify="space-between"
       >
         <Flex flexDir="column" justify="center" gap={4}>

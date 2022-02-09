@@ -6,7 +6,13 @@ import { Navigation } from './Navigation';
 
 export function Header(): JSX.Element {
   return (
-    <Box borderBottomWidth="1px">
+    <Box
+      w="100%"
+      position="fixed"
+      zIndex="overlay"
+      borderBottomWidth="1px"
+      backgroundColor="whiteAlpha.900"
+    >
       <Flex
         w="100%"
         h={20}
