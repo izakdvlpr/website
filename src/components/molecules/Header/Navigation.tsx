@@ -32,20 +32,20 @@ export function Navigation(): JSX.Element {
             fontWeight={600}
             sx={{
               '&:after': {
-                'width': '100%',
-                'height': '2px',
-                'position': 'absolute',
-                'content': '""',
-                'bottom': '-8px',
-                'left': '0',
-                'transform': 'scaleX(0)',
-                'transform-origin': 'bottom right',
-                'transition': 'transform 0.25s ease-out',
-                'backgroundColor': 'black',
+                width: '100%',
+                height: '2px',
+                position: 'absolute',
+                content: '""',
+                bottom: '-8px',
+                left: '0',
+                transform: 'scaleX(0)',
+                transformOrigin: 'bottom right',
+                transition: 'transform 0.25s ease-out',
+                backgroundColor: 'black',
               },
               '&:hover:after': {
-                'transform': 'scaleX(1)',
-                'transform-origin': 'bottom left',
+                transform: 'scaleX(1)',
+                transformOrigin: 'bottom left',
               },
             }}
           >

@@ -4,7 +4,7 @@ export const styles = {
       boxShadow: 'none !important',
     },
     'html': {
-      'scroll-behavior': 'smooth',
+      scrollBehavior: 'smooth',
     },
     'body': {
       color: 'black',

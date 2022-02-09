@@ -17,14 +17,14 @@ export function About(): JSX.Element {
           position="relative"
           sx={{
             '&:after': {
-              'width': '80px',
-              'height': '4px',
-              'margin-right': '1rem',
-              'position': 'absolute',
-              'content': '""',
-              'bottom': '-10px',
-              'display': 'block',
-              'backgroundColor': 'black',
+              width: '80px',
+              height: '4px',
+              marginRight: '1rem',
+              position: 'absolute',
+              content: '""',
+              bottom: '-10px',
+              display: 'block',
+              backgroundColor: 'black',
             },
           }}
         >
