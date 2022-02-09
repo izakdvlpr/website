@@ -1,15 +1,8 @@
 {
-  "include": [
-    "next-env.d.ts",
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    ".next",
-    "**/*.js"
-  ],
+  "include": ["next-env.d.ts", "src/**/*"],
+  "exclude": ["node_modules", ".next", "**/*.js"],
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "src",
     "jsx": "preserve",
     "target": "ES6",
     "module": "ESNext",
@@ -30,27 +23,13 @@
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
     "forceConsistentCasingInFileNames": true,
-    "typeRoots": [
-      "src/@types",
-      "node_modules/@types"
-    ],
-    "lib": [
-      "ES6",
-      "DOM",
-      "ES2016",
-      "ES2020",
-      "ESNext"
-    ],
+    "typeRoots": ["src/@types", "node_modules/@types"],
+    "lib": ["ES6", "DOM", "ES2016", "ES2020", "ESNext"],
     "paths": {
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@styles/*": [
-        "src/styles/*"
-      ],
-      "@interfaces/*": [
-        "src/interfaces/*"
-      ]
+      "@components/*": ["components/*"],
+      "@data/*": ["data/*"],
+      "@styles/*": ["styles/*"],
+      "@interfaces/*": ["interfaces/*"]
     },
     "incremental": true
   }
