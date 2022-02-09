@@ -1,6 +1,6 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
 
-class Document extends NextDocument {
+export default class Document extends NextDocument {
   render(): JSX.Element {
     return (
       <Html lang="pt_BR">
@@ -15,5 +15,3 @@ class Document extends NextDocument {
     );
   }
 }
-
-export default Document;

@@ -1,7 +1,5 @@
 import { Main } from '@components/organisms/Main';
 
-function MainPage(): JSX.Element {
+export default function HomePage(): JSX.Element {
   return <Main />;
 }
-
-export default MainPage;
