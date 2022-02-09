@@ -5,15 +5,15 @@ export interface INavigation {
 
 export const navigation: INavigation[] = [
   {
-    name: 'About',
-    href: '/about',
+    name: 'Quem sou',
+    href: '#about',
   },
   {
-    name: 'Blog',
-    href: '/blog',
+    name: 'Skils',
+    href: '#skils',
   },
   {
-    name: 'Contact',
-    href: '#contact',
+    name: 'Projetos',
+    href: '#projects',
   },
 ];

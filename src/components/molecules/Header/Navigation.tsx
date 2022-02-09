@@ -1,5 +1,3 @@
-/* eslint-disable consistent-return */
-
 import { HStack, Text } from '@chakra-ui/react';
 import { MouseEvent, useCallback } from 'react';
 
@@ -13,7 +11,8 @@ export function Navigation(): JSX.Element {
 
       event.preventDefault();
 
-      return document.getElementById(path.split('#')[0])?.scrollIntoView();
+      // eslint-disable-next-line consistent-return
+      return document.getElementById(path.replace('#', ''))?.scrollIntoView();
     },
     [],
   );
@@ -27,7 +26,29 @@ export function Navigation(): JSX.Element {
           aria-label="next section"
           onClick={event => handleNextSection(link.href, event)}
         >
-          <Text fontSize={{ base: 'xs', md: 'md' }} fontWeight={900}>
+          <Text
+            position="relative"
+            fontSize={{ base: 'xs', md: 'md' }}
+            fontWeight={600}
+            sx={{
+              '&:after': {
+                'width': '100%',
+                'height': '2px',
+                'position': 'absolute',
+                'content': '""',
+                'bottom': '-8px',
+                'left': '0',
+                'transform': 'scaleX(0)',
+                'transform-origin': 'bottom right',
+                'transition': 'transform 0.25s ease-out',
+                'backgroundColor': 'black',
+              },
+              '&:hover:after': {
+                'transform': 'scaleX(1)',
+                'transform-origin': 'bottom left',
+              },
+            }}
+          >
             {link.name}
           </Text>
         </Link>

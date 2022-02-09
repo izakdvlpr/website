@@ -1,7 +1,8 @@
 import { Box, Flex, Heading } from '@chakra-ui/react';
 
+import { Link } from '@components/atoms/Link';
+
 import { Navigation } from './Navigation';
-import { SocialMidia } from './SocialMidia';
 
 export function Header(): JSX.Element {
   return (
@@ -15,11 +16,11 @@ export function Header(): JSX.Element {
         align="center"
         justify="space-between"
       >
-        <SocialMidia />
-
-        <Heading fontSize={{ base: 'md', md: 'xl' }} fontWeight="700">
-          izakdvlpr
-        </Heading>
+        <Link href="/">
+          <Heading fontSize={{ base: 'md', md: 'xl' }} fontWeight="700">
+            izakdvlpr
+          </Heading>
+        </Link>
 
         <Navigation />
       </Flex>
