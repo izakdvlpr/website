@@ -10,14 +10,14 @@ export function Header(): JSX.Element {
         w="100%"
         h={20}
         maxW={1240}
-        px={{ base: 20, lg: 60 }}
+        px={{ base: 10, md: 48 }}
         m="0 auto"
         align="center"
         justify="space-between"
       >
         <SocialMidia />
 
-        <Heading fontSize="xl" fontWeight="700">
+        <Heading fontSize={{ base: 'md', md: 'xl' }} fontWeight="700">
           izakdvlpr
         </Heading>
 
