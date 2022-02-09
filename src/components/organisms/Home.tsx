@@ -1,11 +1,14 @@
-import { Box } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
 import { Header } from '@components/molecules/Header';
+import { Hero } from '@components/molecules/Hero';
 
 export function Home(): JSX.Element {
   return (
-    <Box>
+    <Flex flexDir="column">
       <Header />
-    </Box>
+
+      <Hero />
+    </Flex>
   );
 }
