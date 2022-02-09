@@ -822,6 +822,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/fira-code/-/fira-code-4.5.2.tgz#532ef612aa15b40970e696b3546348ed49512a86"
   integrity sha512-wNUvcqmm1dZYTbJlkbFZL9Huu7p+Hwaa4CLNTPql3CG90Rh9dSi43wNg5AnVHxjAhWQOGlCpSrEswnnHu1CkxA==
 
+"@fontsource/poppins@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.1.tgz#0e2f112dff4319cd04a6622473f23496086a9587"
+  integrity sha512-7GlOGkOElhBVE5RHT33p7w9YDgiXHwx6W5TfBx2UDba8sydY17CRcAnY912/SfaAfkoDU71i+RbIwGfQMQxNlw==
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"
