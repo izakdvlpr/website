@@ -4,11 +4,13 @@ import {
   Heading,
   Grid,
   Image,
-  VStack,
+  Link,
+  Icon,
   Badge,
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { FaGithub, FaLink } from 'react-icons/fa';
 
 import { projects } from '@data/projects';
 
@@ -69,16 +71,29 @@ export function Projects(): JSX.Element {
               />
 
               <Flex p={6} flexDir="column" gap={2}>
-                <Heading
-                  mt="1"
-                  fontWeight="600"
-                  as="h4"
-                  size="md"
-                  lineHeight="tight"
-                  isTruncated
-                >
-                  {title}
-                </Heading>
+                <Flex align="center" gap={2}>
+                  <Heading
+                    fontWeight="600"
+                    as="h4"
+                    size="md"
+                    lineHeight="tight"
+                    isTruncated
+                  >
+                    {title}
+                  </Heading>
+
+                  {links?.github && (
+                    <Link href={links.github} isExternal>
+                      <Icon as={FaGithub} />
+                    </Link>
+                  )}
+
+                  {links?.site && (
+                    <Link href={links.site} isExternal>
+                      <Icon as={FaLink} />
+                    </Link>
+                  )}
+                </Flex>
 
                 <Flex gap={1}>
                   {techs.map(tech => (

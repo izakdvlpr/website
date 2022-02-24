@@ -7,12 +7,11 @@ import {
   Link,
   IconButton,
   Image,
-  useColorModeValue,
 } from '@chakra-ui/react';
 
 import { socialMedia } from '@data/social';
 
-export function Home(): JSX.Element {  
+export function Home(): JSX.Element {
   return (
     <Box borderBottomWidth="1px">
       <Flex
