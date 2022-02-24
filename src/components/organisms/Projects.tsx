@@ -1,23 +1,31 @@
-import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Heading,
+  Grid,
+  Image,
+  VStack,
+  Badge,
+  Text,
+  useColorModeValue,
+} from '@chakra-ui/react';
+
+import { projects } from '@data/projects';
 
 export function Projects(): JSX.Element {
   const theme = {
-    borderBox: useColorModeValue('gray.200', 'gray.800'),
+    lineColor: useColorModeValue('black', 'white'),
+    badgeColor: useColorModeValue('blackAlpha', 'white'),
   };
 
   return (
-    <Box
-      id="projects"
-      borderBottomWidth="1px"
-      borderBottomColor={theme.borderBox}
-    >
+    <Box id="projects" borderBottomWidth="1px">
       <Flex
         w="100%"
         maxW={1240}
         px={{ base: 10, md: 48 }}
         m="6rem auto"
         flexDir="column"
-        gap={8}
       >
         <Heading
           as="h3"
@@ -32,28 +40,72 @@ export function Projects(): JSX.Element {
               content: '""',
               bottom: '-10px',
               display: 'block',
-              backgroundColor: 'black',
+              backgroundColor: theme.lineColor,
             },
           }}
         >
           Projetos
         </Heading>
 
-        <Text as="p" fontFamily="Poppins" textAlign="justify">
-          Prazer Isaque, 18, mas pode me chamar de Izak (meu apelido). Me
-          interessei pela área de{' '}
-          <Text as="i">Desenvolvimento de Software</Text> aos 15 anos com a
-          linguagem Javascript. Comecei programando{' '}
-          <Text as="strong">bots para Discord</Text>, mais eu sempre admirei
-          projetos na Web e principalmente no Mobile.
-        </Text>
+        <Grid
+          mt={10}
+          templateColumns="repeat(auto-fit, minmax(200px, 1fr))"
+          gap="2rem"
+        >
+          {projects.map(({ title, description, image, techs, links }) => (
+            <Box
+              key={title}
+              borderWidth="1px"
+              borderRadius="lg"
+              overflow="hidden"
+            >
+              <Image
+                src={image}
+                alt={title}
+                w="100%"
+                h={150}
+                objectFit="cover"
+                objectPosition="100% 0%"
+              />
 
-        <Text as="p" fontFamily="Poppins" textAlign="justify">
-          Com o passar do tempo eu conheci a Rocketseat, foi quando me apaixonei
-          por JavaScript e conheci as melhores tecnologias, Node.js, React.js,
-          React Native e todo o ecossistema por volta dessas tecnologias às
-          quais eu trabalho hoje.
-        </Text>
+              <Flex p={6} flexDir="column" gap={2}>
+                <Heading
+                  mt="1"
+                  fontWeight="600"
+                  as="h4"
+                  size="md"
+                  lineHeight="tight"
+                  isTruncated
+                >
+                  {title}
+                </Heading>
+
+                <Flex gap={1}>
+                  {techs.map(tech => (
+                    <Badge
+                      key={tech}
+                      borderRadius="full"
+                      px="2"
+                      colorScheme="gray"
+                    >
+                      {tech}
+                    </Badge>
+                  ))}
+                </Flex>
+
+                <Text
+                  as="p"
+                  fontSize={12}
+                  fontFamily="Poppins"
+                  color="gray.600"
+                  lineHeight="5"
+                >
+                  {description}
+                </Text>
+              </Flex>
+            </Box>
+          ))}
+        </Grid>
       </Flex>
     </Box>
   );
