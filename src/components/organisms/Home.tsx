@@ -7,13 +7,18 @@ import {
   Link,
   IconButton,
   Image,
+  useColorModeValue,
 } from '@chakra-ui/react';
 
 import { socialMedia } from '@data/social';
 
 export function Home(): JSX.Element {
+  const theme = {
+    borderBox: useColorModeValue('gray.200', 'gray.800'),
+  };
+
   return (
-    <Box borderBottomWidth="1px">
+    <Box borderBottomWidth="1px" borderBottomColor={theme.borderBox}>
       <Flex
         w="100%"
         maxW={1240}

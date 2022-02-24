@@ -9,11 +9,11 @@ import '@fontsource/poppins/400.css';
 import { ChakraProvider } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 
-import { chakraTheme } from '@styles/theme';
+import { theme } from '@styles/theme';
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   return (
-    <ChakraProvider theme={chakraTheme}>
+    <ChakraProvider theme={theme}>
       <Component {...pageProps} />
     </ChakraProvider>
   );

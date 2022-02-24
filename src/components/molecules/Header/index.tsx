@@ -1,17 +1,25 @@
-import { Box, Flex, Heading } from '@chakra-ui/react';
+import { Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react';
 
 import { Link } from '@components/atoms/Link';
 
 import { Navigation } from './Navigation';
 
 export function Header(): JSX.Element {
+  const theme = {
+    box: {
+      border: useColorModeValue('gray.200', 'gray.800'),
+      bg: useColorModeValue('whiteAlpha.900', 'blackAlpha.900'),
+    },
+  };
+
   return (
     <Box
       w="100%"
       position="fixed"
       zIndex="overlay"
       borderBottomWidth="1px"
-      backgroundColor="whiteAlpha.900"
+      borderBottomColor={theme.box.border}
+      bgColor={theme.box.bg}
     >
       <Flex
         w="100%"

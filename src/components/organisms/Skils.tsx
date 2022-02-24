@@ -1,12 +1,12 @@
 import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 
-export function About(): JSX.Element {
+export function Skils(): JSX.Element {
   const theme = {
     borderBox: useColorModeValue('gray.200', 'gray.800'),
   };
 
   return (
-    <Box id="about" borderBottomWidth="1px" borderBottomColor={theme.borderBox}>
+    <Box id="skils" borderBottomWidth="1px" borderBottomColor={theme.borderBox}>
       <Flex
         w="100%"
         maxW={1240}
@@ -32,7 +32,7 @@ export function About(): JSX.Element {
             },
           }}
         >
-          Quem sou
+          Skils
         </Heading>
 
         <Text as="p" fontFamily="Poppins" textAlign="justify">
