@@ -4,7 +4,7 @@ import { DefaultLayout } from '@components/templates/DefaultLayout';
 import { About } from './About';
 import { Home } from './Home';
 import { Projects } from './Projects';
-import { Skils } from './Skils';
+import { Skills } from './Skills';
 
 export function Main(): JSX.Element {
   return (
@@ -13,7 +13,7 @@ export function Main(): JSX.Element {
 
       <Home />
       <About />
-      <Skils />
+      <Skills />
       <Projects />
     </DefaultLayout>
   );
