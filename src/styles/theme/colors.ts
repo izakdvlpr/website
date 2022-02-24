@@ -1,8 +1,3 @@
-import { ColorHues } from '@chakra-ui/core';
+import { Colors } from '@chakra-ui/react';
 
-export type IColors = Record<
-  string,
-  string | Record<string, string | ColorHues>
->;
-
-export const colors: IColors = {};
+export const colors: Colors = {};

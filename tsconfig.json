@@ -28,8 +28,10 @@
     "paths": {
       "@components/*": ["components/*"],
       "@data/*": ["data/*"],
+      "@interfaces/*": ["interfaces/*"],
       "@styles/*": ["styles/*"],
-      "@interfaces/*": ["interfaces/*"]
+      "@utils": ["utils/index"],
+      "@utils/*": ["utils/*"]
     },
     "incremental": true
   }
