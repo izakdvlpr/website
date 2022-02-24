@@ -12,13 +12,9 @@ import {
 
 import { socialMedia } from '@data/social';
 
-export function Home(): JSX.Element {
-  const theme = {
-    borderBox: useColorModeValue('gray.200', 'gray.800'),
-  };
-
+export function Home(): JSX.Element {  
   return (
-    <Box borderBottomWidth="1px" borderBottomColor={theme.borderBox}>
+    <Box borderBottomWidth="1px">
       <Flex
         w="100%"
         maxW={1240}
@@ -52,10 +48,8 @@ export function Home(): JSX.Element {
                 <IconButton
                   aria-label={name}
                   isRound
-                  icon={<Icon color="white" />}
-                  backgroundColor="black"
-                  _hover={{}}
-                  _active={{}}
+                  icon={<Icon />}
+                  variant="solid"
                 />
               </Link>
             ))}

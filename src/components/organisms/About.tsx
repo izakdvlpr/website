@@ -2,11 +2,11 @@ import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
 
 export function About(): JSX.Element {
   const theme = {
-    borderBox: useColorModeValue('gray.200', 'gray.800'),
+    lineColor: useColorModeValue('black', 'white'),
   };
 
   return (
-    <Box id="about" borderBottomWidth="1px" borderBottomColor={theme.borderBox}>
+    <Box id="about" borderBottomWidth="1px">
       <Flex
         w="100%"
         maxW={1240}
@@ -28,7 +28,7 @@ export function About(): JSX.Element {
               content: '""',
               bottom: '-10px',
               display: 'block',
-              backgroundColor: 'black',
+              backgroundColor: theme.lineColor,
             },
           }}
         >

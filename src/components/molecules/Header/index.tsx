@@ -6,10 +6,7 @@ import { Navigation } from './Navigation';
 
 export function Header(): JSX.Element {
   const theme = {
-    box: {
-      border: useColorModeValue('gray.200', 'gray.800'),
-      bg: useColorModeValue('whiteAlpha.900', 'blackAlpha.900'),
-    },
+    boxBg: useColorModeValue('whiteAlpha.900', 'blackAlpha.900'),
   };
 
   return (
@@ -18,8 +15,7 @@ export function Header(): JSX.Element {
       position="fixed"
       zIndex="overlay"
       borderBottomWidth="1px"
-      borderBottomColor={theme.box.border}
-      bgColor={theme.box.bg}
+      bgColor={theme.boxBg}
     >
       <Flex
         w="100%"
