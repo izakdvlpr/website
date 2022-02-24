@@ -24,7 +24,7 @@ export const projects: IProject[] = [
   {
     title: 'Urbano Norte',
     description:
-      'Busque um serviço de transporte executivo que garanta que você e sua família serão atendidos por um motorista conhecido com segurança.',
+      'Viaje com um serviço de transporte executivo e com um motorista de segurança.',
     image: '/images/projects/urbano-norte.png',
     techs: ['NextJS', 'Tailwind', 'Prismic'],
     links: {
