@@ -32,13 +32,14 @@ export const projects: IProject[] = [
     },
   },
   {
-    title: 'Muoosic',
-    description: 'Encontre a sua melodia com muoosic.',
-    image: '/images/projects/muoosic.png',
-    techs: ['NodeJS', 'GraphQL', 'TDD'],
+    title: 'Animeline',
+    description:
+      'Aplicativo para assistir animes sem propaganda, totalmente gratuito.',
+    image: '/images/projects/animeline.png',
+    techs: ['React Native', 'GraphQL'],
     links: {
-      site: 'https://muoosic.com',
-      github: 'https://github.com/muoosic',
+      site: 'https://animeline.com',
+      github: 'https://github.com/animeline',
     },
   },
   {

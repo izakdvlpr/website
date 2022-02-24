@@ -95,7 +95,7 @@ export function Projects(): JSX.Element {
                   )}
                 </Flex>
 
-                <Flex gap={1}>
+                <Flex maxW="100px" alignItems="baseline" gap={2}>
                   {techs.map(tech => (
                     <Badge
                       key={tech}
@@ -112,7 +112,7 @@ export function Projects(): JSX.Element {
                   as="p"
                   fontSize={12}
                   fontFamily="Poppins"
-                  color="gray.600"
+                  color="gray.400"
                   lineHeight="5"
                 >
                   {description}
