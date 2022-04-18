@@ -1,4 +1,4 @@
-import { IconType } from 'react-icons';
+import type { IconType } from 'react-icons';
 import {
   SiTypescript,
   SiJavascript,
@@ -17,17 +17,17 @@ import {
   SiJest,
 } from 'react-icons/si';
 
-export interface ISkill {
+export interface Skill {
   name: string;
   icon: IconType;
 }
 
-export const languages: Array<ISkill> = [
+export const languages: Skill[] = [
   { name: 'TypeScript', icon: SiTypescript },
   { name: 'JavaScript', icon: SiJavascript },
 ];
 
-export const frameworks: Array<ISkill> = [
+export const frameworks: Skill[] = [
   { name: 'NextJS', icon: SiNextdotjs },
   { name: 'ReactJS', icon: SiReact },
   { name: 'Redux', icon: SiRedux },

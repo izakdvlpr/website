@@ -1,9 +1,9 @@
-export interface INavigation {
+export interface Navigation {
   name: string;
   href: string;
 }
 
-export const navigation: INavigation[] = [
+export const navigation: Navigation[] = [
   {
     name: 'Quem sou',
     href: '#about',

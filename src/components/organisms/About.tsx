@@ -36,7 +36,7 @@ export function About(): JSX.Element {
         </Heading>
 
         <Text as="p" fontFamily="Poppins" textAlign="justify">
-          Prazer Isaque, 18, mas pode me chamar de Izak (meu apelido). Me
+          Prazer Isaque, 19, mas pode me chamar de Izak (meu apelido). Me
           interessei pela área de{' '}
           <Text as="i">Desenvolvimento de Software</Text> aos 15 anos com a
           linguagem Javascript. Comecei programando{' '}

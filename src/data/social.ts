@@ -1,13 +1,13 @@
-import { IconType } from 'react-icons';
+import type { IconType } from 'react-icons';
 import { BsTwitter, BsGithub, BsLinkedin } from 'react-icons/bs';
 
-export interface ISocialMedia {
+export interface SocialMedia {
   name: string;
   link: string;
   icon: IconType;
 }
 
-export const socialMedia: Array<ISocialMedia> = [
+export const socialMedia: SocialMedia[] = [
   {
     name: 'Twitter',
     link: 'https://twitter.com/izakdvlpr',

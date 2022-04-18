@@ -2,10 +2,10 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import React from 'react';
 
-import { TPropsWithChildren } from '@interfaces/react';
+import type { PropsWithChildren } from '@interfaces/react';
 import { makeUrl } from '@utils/url';
 
-interface IProps {
+interface Props {
   title?: string;
   description?: string;
   image?: string;
@@ -18,7 +18,7 @@ export function SEO({
   url,
   image = '/images/metadata.png',
   children,
-}: TPropsWithChildren<IProps>): JSX.Element {
+}: PropsWithChildren<Props>): JSX.Element {
   const router = useRouter();
 
   const metaImage = makeUrl(image);

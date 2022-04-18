@@ -1,4 +1,4 @@
-export interface IProject {
+export interface Project {
   title: string;
   description: string;
   image: string;
@@ -9,18 +9,7 @@ export interface IProject {
   };
 }
 
-export const projects: IProject[] = [
-  {
-    title: 'Skye',
-    description:
-      'Um bot brasileiro desenvolvido para gerenciar servidores de Discord.',
-    image: '/images/projects/skye-bot.png',
-    techs: ['TypeScript', 'NodeJS', 'NextJS'],
-    links: {
-      site: 'https://skyebot.website',
-      github: 'https://github.com/skyebot',
-    },
-  },
+export const projects: Project[] = [
   {
     title: 'Urbano Norte',
     description:
@@ -40,6 +29,17 @@ export const projects: IProject[] = [
     links: {
       site: 'https://animeline.com',
       github: 'https://github.com/animeline',
+    },
+  },
+  {
+    title: 'Skye',
+    description:
+      'Um bot brasileiro desenvolvido para gerenciar servidores de Discord.',
+    image: '/images/projects/skye-bot.png',
+    techs: ['TypeScript', 'NodeJS', 'NextJS'],
+    links: {
+      site: 'https://skyebot.website',
+      github: 'https://github.com/skyebot',
     },
   },
   {

@@ -18,6 +18,7 @@ export function Projects(): JSX.Element {
   const theme = {
     lineColor: useColorModeValue('black', 'white'),
     badgeColor: useColorModeValue('blackAlpha', 'white'),
+    descriptionColor: useColorModeValue('gray.600', 'gray.400'),
   };
 
   return (
@@ -112,7 +113,7 @@ export function Projects(): JSX.Element {
                   as="p"
                   fontSize={12}
                   fontFamily="Poppins"
-                  color="gray.400"
+                  color={theme.descriptionColor}
                   lineHeight="5"
                 >
                   {description}

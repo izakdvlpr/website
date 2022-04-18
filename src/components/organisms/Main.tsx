@@ -5,6 +5,7 @@ import { About } from './About';
 import { Home } from './Home';
 import { Projects } from './Projects';
 import { Skills } from './Skills';
+import { Timeline } from './Timeline';
 
 export function Main(): JSX.Element {
   return (
@@ -15,6 +16,7 @@ export function Main(): JSX.Element {
       <About />
       <Skills />
       <Projects />
+      <Timeline />
     </DefaultLayout>
   );
 }
