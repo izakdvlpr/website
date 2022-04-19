@@ -5,17 +5,16 @@ import '@fontsource/fira-code/600.css';
 import '@fontsource/fira-code/700.css';
 import '@fontsource/poppins/300.css';
 import '@fontsource/poppins/400.css';
-
 import {
   ChakraProvider,
   cookieStorageManager,
   localStorageManager,
 } from '@chakra-ui/react';
-import type { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
 
 import { theme } from '@styles/theme';
 
-export default function App({ Component, pageProps }: AppProps): JSX.Element {
+function App({ Component, pageProps }: any): JSX.Element {
   const colorModeManager =
     typeof pageProps.cookies === 'string'
       ? cookieStorageManager(pageProps.cookies)
@@ -27,3 +26,5 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
     </ChakraProvider>
   );
 }
+
+export default appWithTranslation(App);

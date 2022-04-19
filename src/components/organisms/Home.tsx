@@ -8,10 +8,13 @@ import {
   IconButton,
   Image,
 } from '@chakra-ui/react';
+import { useTranslation } from 'next-i18next';
 
 import { socialMedia } from '@data/social';
 
 export function Home(): JSX.Element {
+  const { t } = useTranslation('home');
+
   return (
     <Box borderBottomWidth="1px">
       <Flex
@@ -27,7 +30,7 @@ export function Home(): JSX.Element {
             textTransform="uppercase"
             letterSpacing="shorter"
           >
-            Hey, i&apos;m Izak.
+            {t('title')}
           </Heading>
 
           <Text
@@ -37,8 +40,7 @@ export function Home(): JSX.Element {
             fontWeight={400}
             textAlign="justify"
           >
-            Programador Full Stack & Apaixonado por Javascript, Tecnologia e
-            Pizza.
+            {t('biography')}
           </Text>
 
           <HStack spacing={4}>

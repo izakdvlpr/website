@@ -9,10 +9,13 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { useTranslation } from 'next-i18next';
 
-import { timelineList } from '@data/timeline';
+import type { TimelineList } from '@data/timeline';
 
 export function Timeline(): JSX.Element {
+  const { t } = useTranslation('timeline');
+
   const theme = {
     lineColor: useColorModeValue('black', 'white'),
     connectDotsColor: useColorModeValue('black', 'white'),
@@ -45,11 +48,16 @@ export function Timeline(): JSX.Element {
             },
           }}
         >
-          Timeline
+          {t('title')}
         </Heading>
 
         <List mt={10}>
-          {timelineList.map(({ year, achievements }) => (
+          {(
+            t('list', {
+              returnObjects: true,
+              joinArrays: false,
+            } as any) as TimelineList[]
+          ).map(({ year, achievements }) => (
             <ListItem key={year}>
               <Heading as="h4" size="md">
                 {year}

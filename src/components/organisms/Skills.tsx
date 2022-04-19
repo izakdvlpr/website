@@ -15,7 +15,7 @@ export function Skills(): JSX.Element {
   };
 
   return (
-    <Box id="skils" borderBottomWidth="1px">
+    <Box id="skills" borderBottomWidth="1px">
       <Flex
         w="100%"
         maxW={1240}

@@ -10,11 +10,14 @@ import {
   Text,
   useColorModeValue,
 } from '@chakra-ui/react';
+import { useTranslation } from 'next-i18next';
 import { FaGithub, FaLink } from 'react-icons/fa';
 
 import { projects } from '@data/projects';
 
 export function Projects(): JSX.Element {
+  const { t } = useTranslation('projects');
+
   const theme = {
     lineColor: useColorModeValue('black', 'white'),
     badgeColor: useColorModeValue('blackAlpha', 'white'),
@@ -47,7 +50,7 @@ export function Projects(): JSX.Element {
             },
           }}
         >
-          Projetos
+          {t('title')}
         </Heading>
 
         <Grid
@@ -55,7 +58,7 @@ export function Projects(): JSX.Element {
           templateColumns="repeat(auto-fit, minmax(200px, 1fr))"
           gap="2rem"
         >
-          {projects.map(({ title, description, image, techs, links }) => (
+          {projects.map(({ title, prefix, image, techs, links }) => (
             <Box
               key={title}
               borderWidth="1px"
@@ -116,7 +119,7 @@ export function Projects(): JSX.Element {
                   color={theme.descriptionColor}
                   lineHeight="5"
                 >
-                  {description}
+                  {t(`description.${prefix}`)}
                 </Text>
               </Flex>
             </Box>

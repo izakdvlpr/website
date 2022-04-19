@@ -1,6 +1,6 @@
 export interface Project {
   title: string;
-  description: string;
+  prefix: string;
   image: string;
   techs: string[];
   links?: {
@@ -12,8 +12,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     title: 'Urbano Norte',
-    description:
-      'Viaje com um serviço de transporte executivo e com um motorista de segurança.',
+    prefix: 'urbanoNorte',
     image: '/images/projects/urbano-norte.png',
     techs: ['NextJS', 'Tailwind', 'Prismic'],
     links: {
@@ -22,8 +21,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Animeline',
-    description:
-      'Aplicativo para assistir animes sem propaganda, totalmente gratuito.',
+    prefix: 'animeline',
     image: '/images/projects/animeline.png',
     techs: ['React Native', 'GraphQL'],
     links: {
@@ -33,8 +31,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Skye',
-    description:
-      'Um bot brasileiro desenvolvido para gerenciar servidores de Discord.',
+    prefix: 'skye',
     image: '/images/projects/skye-bot.png',
     techs: ['TypeScript', 'NodeJS', 'NextJS'],
     links: {
@@ -44,7 +41,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Giky',
-    description: 'Focado em gerir e deixar seu servidor seguro!',
+    prefix: 'giky',
     image: '/images/projects/giky-bot.png',
     techs: ['NextJS', 'Styled Components'],
     links: {
@@ -54,8 +51,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Zorin',
-    description:
-      'Transmita música com a melhor qualidade para seu servidor, online o tempo todo, todos os dias.',
+    prefix: 'zorin',
     image: '/images/projects/zorin-bot.png',
     techs: ['Monorepo', 'NodeJS', 'MongoDB'],
     links: {

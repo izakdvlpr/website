@@ -10,7 +10,10 @@ import {
   useColorModeValue,
   useMediaQuery,
 } from '@chakra-ui/react';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import { MouseEvent, useCallback } from 'react';
+import ReactCountryFlag from 'react-country-flag';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
@@ -18,6 +21,10 @@ import { Link } from '@components/atoms/Link';
 import { navigation } from '@data/navigation';
 
 export function Navigation(): JSX.Element {
+  const router = useRouter();
+
+  const { t } = useTranslation('common');
+
   const { colorMode, toggleColorMode } = useColorMode();
 
   const [isTablet] = useMediaQuery('(max-width: 875px)');
@@ -41,7 +48,7 @@ export function Navigation(): JSX.Element {
   );
 
   return (
-    <HStack spacing={isTablet ? 4 : 8}>
+    <HStack spacing={4}>
       {isTablet ? (
         <Menu>
           <MenuButton
@@ -60,47 +67,49 @@ export function Navigation(): JSX.Element {
                 onClick={event => handleNextSection(link.href, event)}
               >
                 <MenuItem fontSize="xs" fontWeight={600}>
-                  {link.name}
+                  {t(`navigation.${link.name}`)}
                 </MenuItem>
               </Link>
             ))}
           </MenuList>
         </Menu>
       ) : (
-        navigation.map(link => (
-          <Link
-            key={link.name}
-            href={link.href}
-            aria-label="next section"
-            onClick={event => handleNextSection(link.href, event)}
-          >
-            <Text
-              position="relative"
-              fontSize={{ base: 'xs', md: 'md' }}
-              fontWeight={600}
-              sx={{
-                '&:after': {
-                  width: '100%',
-                  height: '2px',
-                  position: 'absolute',
-                  content: '""',
-                  bottom: '-8px',
-                  left: '0',
-                  transform: 'scaleX(0)',
-                  transformOrigin: 'bottom right',
-                  transition: 'transform 0.25s ease-out',
-                  backgroundColor: theme.navLinkHoverLine,
-                },
-                '&:hover:after': {
-                  transform: 'scaleX(1)',
-                  transformOrigin: 'bottom left',
-                },
-              }}
+        <HStack spacing={8}>
+          {navigation.map(link => (
+            <Link
+              key={link.name}
+              href={link.href}
+              aria-label="next section"
+              onClick={event => handleNextSection(link.href, event)}
             >
-              {link.name}
-            </Text>
-          </Link>
-        ))
+              <Text
+                position="relative"
+                fontSize={{ base: 'xs', md: 'md' }}
+                fontWeight={600}
+                sx={{
+                  '&:after': {
+                    width: '100%',
+                    height: '2px',
+                    position: 'absolute',
+                    content: '""',
+                    bottom: '-8px',
+                    left: '0',
+                    transform: 'scaleX(0)',
+                    transformOrigin: 'bottom right',
+                    transition: 'transform 0.25s ease-out',
+                    backgroundColor: theme.navLinkHoverLine,
+                  },
+                  '&:hover:after': {
+                    transform: 'scaleX(1)',
+                    transformOrigin: 'bottom left',
+                  },
+                }}
+              >
+                {t(`navigation.${link.name}`)}
+              </Text>
+            </Link>
+          ))}
+        </HStack>
       )}
 
       <IconButton
@@ -115,6 +124,20 @@ export function Navigation(): JSX.Element {
         onClick={toggleColorMode}
         variant="outline"
       />
+
+      <Link href="/" locale={router.locale === 'en' ? 'pt' : 'en'}>
+        <IconButton
+          aria-label="Change Language"
+          icon={
+            router.locale === 'en' ? (
+              <ReactCountryFlag countryCode="BR" color={theme.icon} svg />
+            ) : (
+              <ReactCountryFlag countryCode="US" color={theme.icon} svg />
+            )
+          }
+          variant="outline"
+        />
+      </Link>
     </HStack>
   );
 }

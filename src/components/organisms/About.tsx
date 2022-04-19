@@ -1,6 +1,9 @@
 import { Box, Flex, Heading, Text, useColorModeValue } from '@chakra-ui/react';
+import { useTranslation } from 'next-i18next';
 
 export function About(): JSX.Element {
+  const { t } = useTranslation('about');
+
   const theme = {
     lineColor: useColorModeValue('black', 'white'),
   };
@@ -32,24 +35,26 @@ export function About(): JSX.Element {
             },
           }}
         >
-          Quem sou
+          {t('title')}
         </Heading>
 
-        <Text as="p" fontFamily="Poppins" textAlign="justify">
-          Prazer Isaque, 19, mas pode me chamar de Izak (meu apelido). Me
-          interessei pela área de{' '}
-          <Text as="i">Desenvolvimento de Software</Text> aos 15 anos com a
-          linguagem Javascript. Comecei programando{' '}
-          <Text as="strong">bots para Discord</Text>, mais eu sempre admirei
-          projetos na Web e principalmente no Mobile.
-        </Text>
+        <Text
+          as="p"
+          fontFamily="Poppins"
+          textAlign="justify"
+          dangerouslySetInnerHTML={{
+            __html: t('blocks.one'),
+          }}
+        />
 
-        <Text as="p" fontFamily="Poppins" textAlign="justify">
-          Com o passar do tempo eu conheci a Rocketseat, foi quando me apaixonei
-          por JavaScript e conheci as melhores tecnologias, Node.js, React.js,
-          React Native e todo o ecossistema por volta dessas tecnologias às
-          quais eu trabalho hoje.
-        </Text>
+        <Text
+          as="p"
+          fontFamily="Poppins"
+          textAlign="justify"
+          dangerouslySetInnerHTML={{
+            __html: t('blocks.two'),
+          }}
+        />
       </Flex>
     </Box>
   );

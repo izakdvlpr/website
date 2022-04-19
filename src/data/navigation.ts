@@ -5,15 +5,15 @@ export interface Navigation {
 
 export const navigation: Navigation[] = [
   {
-    name: 'Quem sou',
+    name: 'about',
     href: '#about',
   },
   {
-    name: 'Skils',
-    href: '#skils',
+    name: 'skills',
+    href: '#skills',
   },
   {
-    name: 'Projetos',
+    name: 'projects',
     href: '#projects',
   },
 ];
