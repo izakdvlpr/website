@@ -14,7 +14,7 @@ interface Props {
 
 export function SEO({
   title = "Hey, I'm Izak :)",
-  description = 'Programador Full Stack & Apaixonado por Javascript, Tecnologia e Pizza.',
+  description = 'Full Stack Programmer & Passionate about Javascript, Technology and Pizza. ',
   url,
   image = '/images/metadata.png',
   children,
