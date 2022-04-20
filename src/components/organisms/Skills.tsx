@@ -40,7 +40,7 @@ export function Skills(): JSX.Element {
             },
           }}
         >
-          Hard Skils
+          Hard Skills
         </Heading>
 
         <Grid
