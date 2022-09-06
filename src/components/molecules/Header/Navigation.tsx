@@ -41,8 +41,7 @@ export function Navigation(): JSX.Element {
 
       event.preventDefault();
 
-      // eslint-disable-next-line consistent-return
-      return document.getElementById(path.replace('#', ''))?.scrollIntoView();
+      return document.getElementById(path.replace('#', ''))?.scrollIntoView(); // eslint-disable-line consistent-return
     },
     [],
   );
@@ -50,7 +49,7 @@ export function Navigation(): JSX.Element {
   return (
     <HStack spacing={4}>
       {isTablet ? (
-        <Menu>
+        <Menu placement="bottom-end">
           <MenuButton
             as={IconButton}
             aria-label="Options"
@@ -125,19 +124,43 @@ export function Navigation(): JSX.Element {
         variant="outline"
       />
 
-      <Link href="/" locale={router.locale === 'en' ? 'pt' : 'en'}>
-        <IconButton
+      <Menu placement="bottom-end">
+        <MenuButton
+          as={IconButton}
           aria-label="Change Language"
           icon={
             router.locale === 'en' ? (
-              <ReactCountryFlag countryCode="BR" color={theme.icon} svg />
+              <ReactCountryFlag countryCode="US" svg />
             ) : (
-              <ReactCountryFlag countryCode="US" color={theme.icon} svg />
+              <ReactCountryFlag countryCode="BR" svg />
             )
           }
           variant="outline"
         />
-      </Link>
+
+        <MenuList minW="150px" bgColor={theme.menuBgColor}>
+          <Link href="/" locale="en">
+            <MenuItem fontSize="xs" fontWeight={600}>
+              <ReactCountryFlag
+                countryCode="US"
+                svg
+                style={{ fontSize: '1rem' }}
+              />
+              <Text pl="0.5rem">{t('english')}</Text>
+            </MenuItem>
+          </Link>
+          <Link href="/" locale="pt">
+            <MenuItem fontSize="xs" fontWeight={600}>
+              <ReactCountryFlag
+                countryCode="BR"
+                svg
+                style={{ fontSize: '1rem' }}
+              />
+              <Text pl="0.5rem">{t('portuguese')}</Text>
+            </MenuItem>
+          </Link>
+        </MenuList>
+      </Menu>
     </HStack>
   );
 }

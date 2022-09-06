@@ -1,15 +1,15 @@
 import { DefaultLayout } from '@components/templates/DefaultLayout';
 
 import { About } from './About';
-import { Home } from './Home';
+import { Main } from './Main';
 import { Projects } from './Projects';
 import { Skills } from './Skills';
 import { Timeline } from './Timeline';
 
-export function Main(): JSX.Element {
+export function Home(): JSX.Element {
   return (
     <DefaultLayout>
-      <Home />
+      <Main />
       <About />
       <Skills />
       <Projects />

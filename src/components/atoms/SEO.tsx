@@ -1,47 +1,36 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import React from 'react';
 
 import type { PropsWithChildren } from '@interfaces/react';
-import { makeUrl } from '@utils/url';
 
-interface Props {
+interface SEOProps {
   title?: string;
   description?: string;
-  image?: string;
-  url?: string;
 }
 
 export function SEO({
   title = "Hey, I'm Izak :)",
   description = 'Full Stack Programmer & Passionate about Javascript, Technology and Pizza. ',
-  url,
-  image = '/images/metadata.png',
   children,
-}: PropsWithChildren<Props>): JSX.Element {
-  const router = useRouter();
-
-  const metaImage = makeUrl(image);
-  const canonical = makeUrl(url ?? router.asPath);
-
+}: PropsWithChildren<SEOProps>): JSX.Element {
   return (
     <Head>
       <title>{title}</title>
 
       <link rel="icon" href="/favicon.png" />
-      <link rel="canonical" href={canonical} />
-      <link itemProp="url" href={url} />
-      <meta name="image" content={metaImage} />
+      <link rel="canonical" href="https://izakdvlpr.vercel.app" />
+      <link itemProp="url" href="https://izakdvlpr.vercel.app" />
+      <meta name="image" content="/images/metadata.png" />
       <meta name="description" content={description} />
       <meta name="theme-color" content="#000000" />
 
       {/* OpenGraph */}
 
       <meta property="og:title" content={title} />
-      <meta property="og:url" content={canonical} />
+      <meta property="og:url" content="https://izakdvlpr.vercel.app" />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content={metaImage} />
+      <meta property="og:image" content="/images/metadata.png" />
 
       {/* Twitter */}
 
@@ -50,7 +39,7 @@ export function SEO({
       <meta name="twitter:site" content="@izakdvlpr" />
       <meta name="twitter:creator" content="@izakdvlpr" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content={metaImage} />
+      <meta name="twitter:image" content="/images/metadata.png" />
 
       {children}
     </Head>

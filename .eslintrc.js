@@ -5,7 +5,6 @@ module.exports = {
   ],
   rules: {
     'react/require-default-props': 'off',
-
     'import/order': [
       'error',
       {

@@ -1,11 +1,11 @@
 import type { UrlObject } from 'url';
 
-import NextLink, { type LinkProps } from 'next/link';
+import NextLink, { type LinkProps as NextLinkProps } from 'next/link';
 import { useMemo, HTMLAttributes } from 'react';
 
 import type { PropsWithChildren } from '@interfaces/react';
 
-interface Props extends LinkProps, HTMLAttributes<HTMLElement> {}
+interface LinkProps extends NextLinkProps, HTMLAttributes<HTMLElement> {}
 
 function parseUrl(url?: string | UrlObject): string | undefined {
   if (!url) return undefined;
@@ -16,7 +16,7 @@ function parseUrl(url?: string | UrlObject): string | undefined {
 export function Link({
   children,
   ...props
-}: PropsWithChildren<Props>): JSX.Element {
+}: PropsWithChildren<LinkProps>): JSX.Element {
   const href = useMemo(
     () => parseUrl(props.as) || parseUrl(props.href),
     [props.as, props.href],

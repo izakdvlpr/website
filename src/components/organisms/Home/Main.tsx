@@ -12,8 +12,8 @@ import { useTranslation } from 'next-i18next';
 
 import { socialMedia } from '@data/social';
 
-export function Home(): JSX.Element {
-  const { t } = useTranslation('home');
+export function Main(): JSX.Element {
+  const { t } = useTranslation('main');
 
   return (
     <Box borderBottomWidth="1px">
@@ -58,7 +58,7 @@ export function Home(): JSX.Element {
         </Flex>
 
         <Image
-          src="/images/profile.jpeg"
+          src="/images/profile.png"
           alt="Izak"
           display={{ base: 'none', lg: 'unset' }}
           borderRadius="full"

@@ -11,7 +11,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { FaGithub, FaLink } from 'react-icons/fa';
+import { FaGithub, FaGooglePlay, FaLink } from 'react-icons/fa';
 
 import { projects } from '@data/projects';
 
@@ -86,15 +86,21 @@ export function Projects(): JSX.Element {
                     {title}
                   </Heading>
 
-                  {links?.github && (
+                  {links && links.github && (
                     <Link href={links.github} isExternal>
                       <Icon as={FaGithub} />
                     </Link>
                   )}
 
-                  {links?.site && (
+                  {links && links.site && (
                     <Link href={links.site} isExternal>
                       <Icon as={FaLink} />
+                    </Link>
+                  )}
+
+                  {links && links.playstore && (
+                    <Link href={links.playstore} isExternal>
+                      <Icon as={FaGooglePlay} />
                     </Link>
                   )}
                 </Flex>

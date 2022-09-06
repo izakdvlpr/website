@@ -1,14 +1,14 @@
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { Main } from '@components/organisms/Main';
+import { Home } from '@components/organisms/Home';
 
 export const getStaticProps: GetStaticProps = async props => {
   const initialLocale = props.locale as string;
   const namespacesRequired = [
     'common',
     'about',
-    'home',
+    'main',
     'projects',
     'timeline',
   ];
@@ -26,5 +26,5 @@ export const getStaticProps: GetStaticProps = async props => {
 };
 
 export default function HomePage(): JSX.Element {
-  return <Main />;
+  return <Home />;
 }
