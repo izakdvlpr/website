@@ -6,26 +6,38 @@ export interface Project {
   links?: {
     site?: string;
     github?: string;
+    playstore?: string;
   };
 }
 
 export const projects: Project[] = [
+  {
+    title: "Marinete's",
+    prefix: 'marinetes',
+    image: '/images/projects/marinetes.png',
+    techs: ['Kotlin', 'TypeScript', 'NodeJS'],
+    links: {
+      site: 'https://marinetes.com.br',
+      playstore:
+        'https://play.google.com/store/apps/details?id=com.marinetes.diarist',
+    },
+  },
   {
     title: 'Urbano Norte',
     prefix: 'urbanoNorte',
     image: '/images/projects/urbano-norte.png',
     techs: ['NextJS', 'Tailwind', 'Prismic'],
     links: {
-      site: 'https://urbanonorte.com',
+      site: 'https://urbanonorte.app',
     },
   },
   {
     title: 'Animeline',
     prefix: 'animeline',
     image: '/images/projects/animeline.png',
-    techs: ['React Native', 'GraphQL'],
+    techs: ['Dart', 'Kotlin', 'Go', 'GraphQL'],
     links: {
-      site: 'https://animeline.com',
+      site: 'https://animeline.xyz',
       github: 'https://github.com/animeline',
     },
   },
