@@ -18,8 +18,8 @@ export function SEO({
       <title>{title}</title>
 
       <link rel="icon" href="/favicon.png" />
-      <link rel="canonical" href="https://izakdvlpr.vercel.app" />
-      <link itemProp="url" href="https://izakdvlpr.vercel.app" />
+      <link rel="canonical" href="https://izak.tech" />
+      <link itemProp="url" href="https://izak.tech" />
       <meta name="image" content="/images/metadata.png" />
       <meta name="description" content={description} />
       <meta name="theme-color" content="#000000" />
@@ -27,7 +27,7 @@ export function SEO({
       {/* OpenGraph */}
 
       <meta property="og:title" content={title} />
-      <meta property="og:url" content="https://izakdvlpr.vercel.app" />
+      <meta property="og:url" content="https://izak.tech" />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="/images/metadata.png" />
