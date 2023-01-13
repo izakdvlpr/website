@@ -1,3 +1,3 @@
 # my-portfolio
 
-😄 My portfolio on it I tell more about me.
+My portfolio on it I tell more about me.
