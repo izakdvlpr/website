@@ -25,6 +25,7 @@ export interface Skill {
 export interface SocialMedia {
   name: string;
   link: string;
+  externalLink?: boolean;
   icon: IconType;
 }
 

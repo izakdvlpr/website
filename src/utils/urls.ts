@@ -1,4 +1,5 @@
 export const urls = {
+  email: 'mailto:hello@izakdvlpr.com',
   website: 'https://izakdvlpr.com',
   github: 'https://github.com/izakdvlpr',
   twitter: 'https://twitter.com/izakdvlpr',

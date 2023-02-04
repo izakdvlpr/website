@@ -14,8 +14,8 @@ export function Footer(): JSX.Element {
       justify="flex-end"
     >
       <HStack spacing={4}>
-        {socialMedia.map(({ name, link, icon: Icon }) => (
-          <Link key={name} href={link} isExternal>
+        {socialMedia.map(({ name, link, externalLink, icon: Icon }) => (
+          <Link key={name} href={link} isExternal={externalLink}>
             <IconButton
               aria-label={name}
               isRound
