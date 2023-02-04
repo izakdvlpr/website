@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 
-import type { TimelineList } from '@data/timeline';
+import type { TimelineList } from '@/interfaces/data';
 
 export function Timeline(): JSX.Element {
   const { t } = useTranslation('timeline');
@@ -56,7 +56,7 @@ export function Timeline(): JSX.Element {
             t('list', {
               returnObjects: true,
               joinArrays: false,
-            } as any) as TimelineList[]
+            } as any) as unknown as TimelineList[]
           ).map(({ year, achievements }) => (
             <ListItem key={year}>
               <Heading as="h4" size="md">

@@ -1,4 +1,4 @@
-import { DefaultLayout } from '@components/templates/DefaultLayout';
+import { DefaultLayout } from '@/components/templates/DefaultLayout';
 
 import { About } from './About';
 import { Main } from './Main';

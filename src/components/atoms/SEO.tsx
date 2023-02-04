@@ -1,7 +1,8 @@
 import Head from 'next/head';
-import React from 'react';
+import { NextSeo } from 'next-seo';
+import type { PropsWithChildren } from 'react';
 
-import type { PropsWithChildren } from '@interfaces/react';
+import { urls } from '@/utils/urls';
 
 interface SEOProps {
   title?: string;
@@ -18,28 +19,24 @@ export function SEO({
       <title>{title}</title>
 
       <link rel="icon" href="/favicon.png" />
-      <link rel="canonical" href="https://izak.tech" />
-      <link itemProp="url" href="https://izak.tech" />
-      <meta name="image" content="/images/metadata.png" />
-      <meta name="description" content={description} />
-      <meta name="theme-color" content="#000000" />
 
-      {/* OpenGraph */}
-
-      <meta property="og:title" content={title} />
-      <meta property="og:url" content="https://izak.tech" />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="website" />
-      <meta property="og:image" content="/images/metadata.png" />
-
-      {/* Twitter */}
-
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:site" content="@izakdvlpr" />
-      <meta name="twitter:creator" content="@izakdvlpr" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content="/images/metadata.png" />
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={urls.website}
+        themeColor="#000000"
+        openGraph={{
+          title,
+          description,
+          url: urls.website,
+          siteName: 'izakdvlpr',
+          type: 'website',
+        }}
+        twitter={{
+          site: '@izakdvlpr',
+          cardType: 'summary_large_image',
+        }}
+      />
 
       {children}
     </Head>

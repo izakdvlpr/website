@@ -1,16 +1,25 @@
-export interface Project {
-  title: string;
-  prefix: string;
-  image: string;
-  techs: string[];
-  links?: {
-    site?: string;
-    github?: string;
-    playstore?: string;
-  };
-}
+import type { Project } from '@/interfaces/data';
 
 export const projects: Project[] = [
+  {
+    title: 'Radiola',
+    prefix: 'radiola',
+    image: '/images/projects/radiola.png',
+    techs: ['TypeScript', 'Lavalink', 'WS'],
+    links: {
+      github: 'https://github.com/radiolabot',
+    },
+  },
+  {
+    title: 'Rebimboka',
+    prefix: 'rebimboka',
+    image: '/images/projects/rebimboka.png',
+    techs: ['Kotlin', 'Go', 'TypeScript'],
+    links: {
+      site: 'https://rebimboka.com.br',
+      github: 'https://github.com/rebimboka',
+    },
+  },
   {
     title: "Marinete's",
     prefix: 'marinetes',
@@ -32,10 +41,20 @@ export const projects: Project[] = [
     },
   },
   {
+    title: 'Muoosic',
+    prefix: 'muoosic',
+    image: '/images/projects/muoosic.png',
+    techs: ['Kotlin', 'Go', 'WS'],
+    links: {
+      site: 'https://muoosic.com',
+      github: 'https://github.com/muoosic',
+    },
+  },
+  {
     title: 'Animeline',
     prefix: 'animeline',
     image: '/images/projects/animeline.png',
-    techs: ['Dart', 'Kotlin', 'Go', 'GraphQL'],
+    techs: ['Kotlin', 'Go', 'GraphQL'],
     links: {
       site: 'https://animeline.xyz',
       github: 'https://github.com/animeline',

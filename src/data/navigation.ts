@@ -1,7 +1,4 @@
-export interface Navigation {
-  name: string;
-  href: string;
-}
+import { Navigation } from '@/interfaces/data';
 
 export const navigation: Navigation[] = [
   {

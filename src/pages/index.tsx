@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { Home } from '@components/organisms/Home';
+import { Home } from '@/components/organisms/Home';
 
 export const getStaticProps: GetStaticProps = async props => {
   const initialLocale = props.locale as string;

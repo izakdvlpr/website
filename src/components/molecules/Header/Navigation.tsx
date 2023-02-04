@@ -10,15 +10,15 @@ import {
   useColorModeValue,
   useMediaQuery,
 } from '@chakra-ui/react';
-import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 import { MouseEvent, useCallback } from 'react';
 import ReactCountryFlag from 'react-country-flag';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
-import { Link } from '@components/atoms/Link';
-import { navigation } from '@data/navigation';
+import { navigation } from '@/data/navigation';
 
 export function Navigation(): JSX.Element {
   const router = useRouter();

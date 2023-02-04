@@ -1,4 +1,19 @@
+import { extendTheme } from '@chakra-ui/react';
 import type { Styles } from '@chakra-ui/theme-tools';
+
+export const config = {
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+};
+
+export const fonts = {
+  body: 'Fira Code',
+  heading: 'Fira Code',
+};
+
+export const semanticTokens = {
+  colors: {},
+};
 
 export const styles: Styles = {
   global: props => ({
@@ -19,3 +34,10 @@ export const styles: Styles = {
     },
   }),
 };
+
+export const theme = extendTheme({
+  config,
+  fonts,
+  semanticTokens,
+  styles,
+});

@@ -3,21 +3,21 @@ import '@fontsource/fira-code/400.css';
 import '@fontsource/fira-code/500.css';
 import '@fontsource/fira-code/600.css';
 import '@fontsource/fira-code/700.css';
-import '@fontsource/poppins/300.css';
-import '@fontsource/poppins/400.css';
+
 import {
   ChakraProvider,
-  cookieStorageManager,
+  cookieStorageManagerSSR,
   localStorageManager,
 } from '@chakra-ui/react';
+import type { AppProps } from 'next/app';
 import { appWithTranslation } from 'next-i18next';
 
-import { theme } from '@styles/theme';
+import { theme } from '@/theme';
 
-function App({ Component, pageProps }: any): JSX.Element {
+function App({ Component, pageProps }: AppProps): JSX.Element {
   const colorModeManager =
     typeof pageProps.cookies === 'string'
-      ? cookieStorageManager(pageProps.cookies)
+      ? cookieStorageManagerSSR(pageProps.cookies)
       : localStorageManager;
 
   return (

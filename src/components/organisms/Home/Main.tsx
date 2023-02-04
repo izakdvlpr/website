@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 
-import { socialMedia } from '@data/social';
+import { socialMedia } from '@/data/social';
 
 export function Main(): JSX.Element {
   const { t } = useTranslation('main');
@@ -58,7 +58,7 @@ export function Main(): JSX.Element {
         </Flex>
 
         <Image
-          src="/images/profile.png"
+          src="/images/profile.jpeg"
           alt="Izak"
           display={{ base: 'none', lg: 'unset' }}
           borderRadius="full"

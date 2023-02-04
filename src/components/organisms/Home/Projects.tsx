@@ -13,7 +13,7 @@ import {
 import { useTranslation } from 'next-i18next';
 import { FaGithub, FaGooglePlay, FaLink } from 'react-icons/fa';
 
-import { projects } from '@data/projects';
+import { projects } from '@/data/projects';
 
 export function Projects(): JSX.Element {
   const { t } = useTranslation('projects');

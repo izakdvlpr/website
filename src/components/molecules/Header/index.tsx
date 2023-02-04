@@ -1,6 +1,5 @@
 import { Box, Flex, Heading, useColorModeValue } from '@chakra-ui/react';
-
-import { Link } from '@components/atoms/Link';
+import Link from 'next/link';
 
 import { Navigation } from './Navigation';
 

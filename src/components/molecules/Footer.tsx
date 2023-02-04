@@ -1,6 +1,6 @@
 import { Flex, HStack, Link, IconButton } from '@chakra-ui/react';
 
-import { socialMedia } from '@data/social';
+import { socialMedia } from '@/data/social';
 
 export function Footer(): JSX.Element {
   return (

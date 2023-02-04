@@ -7,7 +7,7 @@ import {
   useColorModeValue,
 } from '@chakra-ui/react';
 
-import { languages, frameworks } from '@data/skills';
+import { languages, frameworks } from '@/data/skills';
 
 export function Skills(): JSX.Element {
   const theme = {
