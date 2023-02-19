@@ -7,8 +7,8 @@ export const config = {
 };
 
 export const fonts = {
-  body: 'Fira Code',
-  heading: 'Fira Code',
+  body: "'Fira Code', sans-serif",
+  heading: "'Fira Code', sans-serif",
 };
 
 export const semanticTokens = {
