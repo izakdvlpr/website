@@ -2,15 +2,6 @@ import type { Project } from '@/interfaces/data';
 
 export const projects: Project[] = [
   {
-    title: 'Radiola',
-    prefix: 'radiola',
-    image: '/images/projects/radiola.png',
-    techs: ['TypeScript', 'Lavalink', 'WS'],
-    links: {
-      github: 'https://github.com/radiolabot',
-    },
-  },
-  {
     title: 'Rebimboka',
     prefix: 'rebimboka',
     image: '/images/projects/rebimboka.png',
@@ -48,16 +39,6 @@ export const projects: Project[] = [
     links: {
       site: 'https://muoosic.com',
       github: 'https://github.com/muoosic',
-    },
-  },
-  {
-    title: 'Animeline',
-    prefix: 'animeline',
-    image: '/images/projects/animeline.png',
-    techs: ['Kotlin', 'Go', 'GraphQL'],
-    links: {
-      site: 'https://animeline.xyz',
-      github: 'https://github.com/animeline',
     },
   },
   {
