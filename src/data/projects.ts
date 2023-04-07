@@ -48,7 +48,7 @@ export const projects: Project[] = [
     techs: ['TypeScript', 'NodeJS', 'NextJS'],
     links: {
       site: 'https://skyebot.website',
-      github: 'https://github.com/skyebot',
+      github: 'https://github.com/skyebotofc',
     },
   },
   {
