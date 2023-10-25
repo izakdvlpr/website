@@ -21,7 +21,7 @@
     "@fontsource/poppins": "^4.5.10",
     "framer-motion": "^9.0.1",
     "i18next": "^22.4.9",
-    "next": "^13.1.6",
+    "next": "^13.5.0",
     "next-i18next": "^13.1.4",
     "next-seo": "^5.15.0",
     "react": "^18.2.0",
